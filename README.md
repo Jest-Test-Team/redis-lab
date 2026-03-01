@@ -22,4 +22,23 @@
 3. **死間開關 (Dead Man's Switch):** 監測連線狀態，觸發「焦土政策」(數據全毀) 或「玉石俱焚」(情報全網廣播)。
 
 ## 📦 快速啟動 (Quick Start)
-*(待開發完成後補充 `docker-compose up -d` 等指令)*
+
+```bash
+# 一鍵啟動所有服務（Redis、Gateway、Sentinel、Engine、Identity、Frontend）
+docker-compose up -d
+
+# 前端：http://localhost:3000
+# 閘道 WebSocket / API：http://localhost:8080
+# 撮合引擎 API：http://localhost:8081
+# 身份服務 API：http://localhost:8082
+```
+
+**環境變數（可選）：**  
+`REDIS_ADDR`、`ENGINE_URL`、`IDENTITY_URL`（Gateway）；`DEADMAN_KEY_PREFIX`（Sentinel）；`PORT`（各服務）。
+
+**本雛形對應三大機制：**  
+- 極短線拍賣：Engine 透過 Redis Lua 執行 5 秒競標與原子結標。  
+- 身份洗牌：Gateway 每 10 秒對 WebSocket 連線推送新虛擬 ID。  
+- 死間開關：Sentinel 訂閱 Redis Keyspace 過期事件，觸發焦土邏輯並可 PUBLISH 通知。
+
+```

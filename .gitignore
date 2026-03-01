@@ -1,2 +1,7 @@
 src/redis-lab/
 /.cursor/plans
+
+# Mirage Exchange apps
+apps/frontend/node_modules/
+apps/frontend/.next/
+**/target/

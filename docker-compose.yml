@@ -1,0 +1,76 @@
+# 蜃景交易所 — 本地一鍵啟動：Redis + Gateway + Sentinel + Engine + Identity + Frontend
+# 使用方式: docker-compose up -d
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    command: redis-server --notify-keyspace-events Ex
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  gateway:
+    build:
+      context: .
+      dockerfile: apps/gateway/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      REDIS_ADDR: redis:6379
+      ENGINE_URL: http://engine:8081
+      IDENTITY_URL: http://identity:8082
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  sentinel:
+    build:
+      context: .
+      dockerfile: apps/sentinel/Dockerfile
+    environment:
+      REDIS_ADDR: redis:6379
+      DEADMAN_KEY_PREFIX: mirage:deadman:
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  engine:
+    build:
+      context: .
+      dockerfile: apps/engine/Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      REDIS_ADDR: redis://redis:6379/
+      PORT: "8081"
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  identity:
+    build:
+      context: .
+      dockerfile: apps/identity/Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      REDIS_ADDR: redis://redis:6379/
+      PORT: "8082"
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: apps/frontend/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_GATEWAY_WS: ws://localhost:8080/ws
+    depends_on:
+      - gateway
