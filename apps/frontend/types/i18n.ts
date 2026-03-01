@@ -19,4 +19,14 @@ export interface Messages {
   logError: string;
   logEvent: string;
   logParseError: string;
+  auctionId: string;
+  createAuction: string;
+  placeBid: string;
+  liveBids: string;
+  rank: string;
+  amount: string;
+  settle: string;
+  bidAmount: string;
+  intelDestroyed: string;
+  countdown: string;
 }

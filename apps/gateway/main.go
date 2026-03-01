@@ -288,9 +288,21 @@ func proxyGET(url string) gin.HandlerFunc {
 }
 
 func proxyLeaderboard(base string) gin.HandlerFunc {
+	client := &http.Client{Timeout: 5 * time.Second}
 	return func(c *gin.Context) {
 		id := c.Param("id")
-		_ = base
-		c.JSON(http.StatusOK, gin.H{"auctionId": id, "entries": []interface{}{}})
+		url := base + "/auction/leaderboard/" + id
+		req, err := http.NewRequestWithContext(c.Request.Context(), http.MethodGet, url, nil)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+			return
+		}
+		resp, err := client.Do(req)
+		if err != nil {
+			c.JSON(http.StatusBadGateway, gin.H{"error": err.Error(), "entries": []interface{}{}})
+			return
+		}
+		defer resp.Body.Close()
+		c.DataFromReader(resp.StatusCode, resp.ContentLength, resp.Header.Get("Content-Type"), resp.Body, nil)
 	}
 }

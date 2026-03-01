@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useWs } from "@/hooks/useWs";
 import { useAuction } from "@/hooks/useAuction";
@@ -25,6 +25,15 @@ export default function Home() {
   const [killSwitchIntel, setKillSwitchIntel] = useState("");
 
   const { entries, settledEvent } = useAuction(auctionId || null, messages);
+
+  useEffect(() => {
+    if (settledEvent && virtualId && settledEvent.winner_id === virtualId) {
+      setKillSwitchIntel(
+        settledEvent.top_bid != null ? `Winning bid: ${settledEvent.top_bid}` : "Intel received."
+      );
+      setKillSwitchVisible(true);
+    }
+  }, [settledEvent, virtualId]);
 
   const handleCreate = async () => {
     const id = auctionId.trim() || `auction-${Date.now()}`;

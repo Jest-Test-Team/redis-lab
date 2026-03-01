@@ -14,9 +14,9 @@ export function OrderBookWaterfall({ entries, maxRows = 12 }: OrderBookWaterfall
   return (
     <ul className="font-mono text-[10px] text-white/80 overflow-y-auto space-y-0.5 max-h-48 list-none p-0 m-0">
       <AnimatePresence mode="popLayout" initial={false}>
-        {list.map((entry, index) => (
+        {list.map((entry) => (
           <motion.li
-            key={`${entry.bidder_id}-${entry.amount}-${entry.rank}`}
+            key={`${entry.rank}-${entry.bidder_id}-${entry.amount}`}
             layout
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
