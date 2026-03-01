@@ -1,10 +1,12 @@
 import { getGatewayWsUrl, getGatewayApiUrl } from "@/lib/gateway-url";
 
 const originalEnv = process.env;
+const originalWindow = typeof globalThis !== "undefined" ? (globalThis as any).window : undefined;
 
 describe("getGatewayWsUrl", () => {
   afterEach(() => {
     process.env = { ...originalEnv };
+    (globalThis as any).window = originalWindow;
   });
 
   it("returns NEXT_PUBLIC_GATEWAY_WS when set", () => {
@@ -14,23 +16,17 @@ describe("getGatewayWsUrl", () => {
 
   it("returns ws://localhost:8080/ws when hostname is localhost", () => {
     delete process.env.NEXT_PUBLIC_GATEWAY_WS;
-    Object.defineProperty(global, "window", {
-      value: {
-        location: { hostname: "localhost", protocol: "http:", host: "localhost:3000" },
-      },
-      writable: true,
-    });
+    (globalThis as any).window = {
+      location: { hostname: "localhost", protocol: "http:", host: "localhost:3000" },
+    };
     expect(getGatewayWsUrl()).toBe("ws://localhost:8080/ws");
   });
 
   it("returns same-origin /ws when not localhost", () => {
     delete process.env.NEXT_PUBLIC_GATEWAY_WS;
-    Object.defineProperty(global, "window", {
-      value: {
-        location: { hostname: "vercel.app", protocol: "https:", host: "mirage.vercel.app" },
-      },
-      writable: true,
-    });
+    (globalThis as any).window = {
+      location: { hostname: "vercel.app", protocol: "https:", host: "mirage.vercel.app" },
+    };
     expect(getGatewayWsUrl()).toBe("wss://mirage.vercel.app/ws");
   });
 });
@@ -38,6 +34,7 @@ describe("getGatewayWsUrl", () => {
 describe("getGatewayApiUrl", () => {
   afterEach(() => {
     process.env = { ...originalEnv };
+    (globalThis as any).window = originalWindow;
   });
 
   it("returns NEXT_PUBLIC_GATEWAY_API when set", () => {
@@ -47,23 +44,17 @@ describe("getGatewayApiUrl", () => {
 
   it("returns http://localhost:8080 when hostname is localhost", () => {
     delete process.env.NEXT_PUBLIC_GATEWAY_API;
-    Object.defineProperty(global, "window", {
-      value: {
-        location: { hostname: "localhost", origin: "http://localhost:3000" },
-      },
-      writable: true,
-    });
+    (globalThis as any).window = {
+      location: { hostname: "localhost", origin: "http://localhost:3000" },
+    };
     expect(getGatewayApiUrl()).toBe("http://localhost:8080");
   });
 
   it("returns window.origin when not localhost", () => {
     delete process.env.NEXT_PUBLIC_GATEWAY_API;
-    Object.defineProperty(global, "window", {
-      value: {
-        location: { hostname: "vercel.app", origin: "https://mirage.vercel.app" },
-      },
-      writable: true,
-    });
+    (globalThis as any).window = {
+      location: { hostname: "vercel.app", origin: "https://mirage.vercel.app" },
+    };
     expect(getGatewayApiUrl()).toBe("https://mirage.vercel.app");
   });
 });
