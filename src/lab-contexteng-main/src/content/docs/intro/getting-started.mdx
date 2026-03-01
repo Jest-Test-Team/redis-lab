@@ -1,0 +1,83 @@
+---
+title: "Get Started"
+sidebar:
+ order: 1
+---
+import { Icon } from "@astrojs/starlight/components";
+
+In this section, we will guide you through the steps to get started with the lab in the Jupyter Notebook.
+
+### Environment Overview
+
+You will work within a pre-configured Jupyter notebook environment. The lab will be spread across multiple notebooks located inside of the `materials` directory of the Jupyter file system broken into the three sections outlined earlier:
+
+<img src='/images/ce-file-browser.png' alt='Jupyter Notebook File Browser' style='width: 90%; margin:auto;' />
+
+You will be able to run all the code for this lab inside the notebook, and no external environment or resources are required. Behind the scenes, an instance of open source Redis is already running. When you run code blocks in the notebook or explore data in Redis Insight, you're interacting directly with that live Redis instance.
+
+We recommend switching the view to the notebook table of contents for easy navigation. You can do this by clicking the "Table of Contents" button (three lines) in the left side panel of the interface. This will help you quickly jump to different sections of the lab.
+
+<img src='/images/toc-ce.png' alt='Jupyter Notebook Table of Contents' style='width: 90%; margin:auto;' />
+
+**Note:** If you're new to the Jupyter Notebook environment, we have compiled a FAQ below. There is no need to review all the questions, but they can be referenced if you have questions about the environment or how to use it during the lab.
+
+### Open the Jupyter Environment
+
+Use the button below to open the Jupyter environment for this lab. You're starting point will be the "Introduction to Context Engineering" notebook in section one.
+
+<div id="start-lab">
+    <a href="http://localhost:10889/lab/tree/work/materials/section-1-context-engineering-foundations/introduction_to_context_engineering.ipynb" target="jupyter" class="cta-button">
+        Open Jupyter Notebook
+        <svg
+            class="arrow-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+        </svg>
+    </a>
+</div>
+
+### Jupyter Notebook Interface FAQ
+
+<details>
+<summary> How do I run each block of code? </summary>
+
+There are three ways to run a code cell after you select it:
+
+- Press `Shift + Enter`
+- Click the "Run" button (play icon) in the toolbar of the notebook.
+- Click the "Run" button (play icon) in the cell itself at the top right corner.
+
+When you run a code cell, it will execute the code inside it and display the output directly below the cell. If there are any errors, they will also be displayed in the output area.
+
+</details>
+
+<details>
+
+<summary> How do I reset each notebook environment? </summary>
+
+Sometimes you may want to reset the notebook to its initial state. To do this, you can use the "Restart Kernel and Clear All Outputs" option from the "Kernel" menu at the top of the Jupyter interface. This will clear all outputs and reset the kernel, allowing you to start fresh. This reset only affects the current notebook and does not impact any other notebooks or the Redis instance running in the background.
+
+<img src='/images/restart.png' style='width: 70%; margin:auto;' />
+
+</details>
+
+<details>
+
+<summary> How do I know if the notebook is running? </summary>
+
+If you are ever wondering if a code block is still running, you can check the top right corner of the Jupyter interface. If the kernel is busy, it will show a circle icon that is filled in. If the kernel is idle, it will show an empty circle icon.
+
+Idle kernel:
+<img src='/images/idle-ker.png' style='width: 70%; margin:auto;' />
+
+Running kernel:
+<img src='/images/running-ker.png' style='width: 70%; margin:auto;' />
+
+</details>

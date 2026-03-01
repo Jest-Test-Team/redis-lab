@@ -1,0 +1,15 @@
+version: "3"
+services:
+  test:
+    container_name: test
+    build: .
+    depends_on:
+      - redis
+
+  redis:
+    container_name: redis
+    image: redislabs/redistimeseries
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redisdata:/data

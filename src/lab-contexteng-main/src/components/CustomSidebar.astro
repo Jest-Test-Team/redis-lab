@@ -1,0 +1,35 @@
+---
+import DefaultSidebar from "@astrojs/starlight/components/Sidebar.astro";
+import { Icon } from "@astrojs/starlight/components";
+---
+
+<div class="custom-sidebar">
+    <!-- Render the default sidebar content -->
+    <!-- @ts-ignore -->
+    <DefaultSidebar {...Astro.props} />
+
+    <!-- Your fixed link at the bottom -->
+    <div class="fixed-link-container">
+        <a
+            id="dynamic-typeform-link"
+            href="https://www.research.net/r/rubugreport?section_name=[section_name_value]&course_title=[course_title_value]"
+            class="fixed-link"
+            target="_blank"
+        >
+            <p>Report a Bug</p>
+            <Icon class="link-icon" name="right-arrow" />
+        </a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let link = document.getElementById("dynamic-typeform-link");
+        if (link instanceof HTMLAnchorElement) {
+            let pathname = encodeURIComponent(window.location.pathname);
+            let title =
+                document.querySelectorAll(".header span")[0].textContent;
+            link.href = `https://www.research.net/r/rubugreport?section_name=${pathname}&course_title=${title}`;
+        }
+    });
+</script>

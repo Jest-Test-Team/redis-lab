@@ -1,0 +1,53 @@
+---
+import DefaultPageFrame from "@astrojs/starlight/components/PageFrame.astro";
+
+const isHomePage = Astro.url.pathname === "/";
+---
+
+{
+    isHomePage ? (
+        <div class="page sl-flex">
+            <div class="content-panel">
+                <div class="sl-container">
+                    <main data-pagefind-body class="sl-markdown-content">
+                        <slot />
+                    </main>
+                </div>
+            </div>
+        </div>
+        <style>
+            body{
+                margin: 0;
+            }
+            .content-panel {
+                width: 100%;
+                padding: 0;
+            }
+            .logo{
+                display: flex;
+                justify-content: center;
+            }
+            main{
+                padding: 0;
+                height: 100vh;
+            }
+            footer{
+                display: none!important;
+            }
+            .sl-markdown-content{
+                margin:0;
+                padding:0;
+            }
+            .sl-container{
+                width: 100%;
+                max-width: none;
+            }
+        </style>
+    ) : (
+        <DefaultPageFrame {...Astro.props}>
+            <slot />
+            <slot name="sidebar" slot="sidebar" />
+            <slot name="header" slot="header" />
+        </DefaultPageFrame>
+    )
+}

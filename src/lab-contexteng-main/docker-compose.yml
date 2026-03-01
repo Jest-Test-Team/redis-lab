@@ -1,0 +1,107 @@
+version: '3'
+services:
+  redis:
+    image: redis:8.0.0
+    container_name: redis
+    restart: always
+
+  redis-insight:
+    image: redislabs/redisinsight:2.68
+    container_name: redis-insight
+    ports:
+      - "5540:5540"
+    volumes:
+      - ./redisinsight/db/redisinsight.db:/data/redisinsight.db
+    restart: always
+
+  jupyter:
+    container_name: jupyter
+    ports:
+      - "10889:8888"
+    volumes:
+      - ./jupyter-config/jupyter_server_config.py:/home/jovyan/.jupyter/jupyter_server_config.py  
+      - ./materials/:/home/jovyan/work/materials
+      - ./notebook-config/custom.css:/home/jovyan/.jupyter/custom/custom.css
+      - ./notebook-config/overrides.json:/opt/conda/share/jupyter/lab/settings/overrides.json
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_PASSWORD=trainee
+      - OPENAI_API_KEY=${LITELLM_API_KEY}
+      - OPENAI_API_BASE=http://litellm:4000
+      - REDIS_HOST=redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 5s
+      timeout: 10s
+      retries: 20 
+    build:
+      context: .
+    restart: always
+
+  agent-memory-server:
+    image: ghcr.io/redis/agent-memory-server:0.12.3
+    container_name: agent-memory-server
+    environment:
+      OPENAI_API_KEY: ${GENAI_WKSHP_OPENAI_API_KEY}
+      #   - OPENAI_API_BASE=http://litellm:4000
+      REDIS_URL: redis://redis:6379
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8088/v1/health"]
+      interval: 5s
+      timeout: 10s
+      retries: 20 
+
+  docs:
+    image: httpd:2.4.63
+    container_name: docs
+    environment:
+      - VM_HOST=${HOSTNAME}
+      - HOST_IP=${HOST_IP}  
+      - DOMAIN=${DOMAIN}
+    ports:
+      - '80:80'
+    volumes:
+      - './dist/client:/usr/local/apache2/htdocs/'
+      - './httpd.conf:/usr/local/apache2/conf/httpd.conf'
+    depends_on:
+      jupyter:
+        condition: service_healthy 
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: litellm
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: litellm
+      POSTGRES_HOST_AUTH_METHOD: trust
+      #volumes:
+      #- ./postgres_data:/var/lib/postgresql/data
+  litellm:
+    image: ghcr.io/berriai/litellm:main-v1.68.0-stable
+    container_name: litellm
+    environment:
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY}
+      DATABASE_URL: postgres://litellm:password@postgres:5432/litellm
+      STORE_MODEL_IN_DB: "true"
+      GOOGLE_APPLICATION_CREDENTIALS: /app/sa.json
+      OPENAI_API_KEY: ${GENAI_WKSHP_OPENAI_API_KEY}
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./litellm_config.yaml:/app/config.yaml
+      - ./vertex_sa.json:/app/sa.json
+    depends_on:
+      - postgres
+    command: --config /app/config.yaml --detailed_debug
+
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.21.0/24
+          gateway: 172.16.21.1
+

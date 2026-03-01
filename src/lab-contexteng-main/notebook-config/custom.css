@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --jp-ui-font-family: 'Space Grotesk', sans-serif !important;
+    --jp-content-font-family: 'Geist', sans-serif !important;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    /* Styles for dark mode */
+    .jp-OutputArea-output {
+        background-color: #5f9dcf69;
+        padding: 20px !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    /* Styles for light mode */
+    .jp-OutputArea-output {
+        background-color: #5f9dcf40;
+        padding: 20px !important;
+    }
+}
+
+.jp-MarkdownCell .jp-ToolbarButtonComponent[data-command="notebook:run-cell"],
+.jp-RawCell .jp-ToolbarButtonComponent[data-command="notebook:run-cell"] {
+    display: none !important;
+}
+
+.jp-RenderedHTMLCommon blockquote {
+    margin-left: 0 !important;
+}
+
+details {
+    background-color: #5f9dcf40;
+    border: 1px solid #4a90e2;
+    border-radius: 8px;
+    padding: 0.75em 1em;
+    margin: 1em 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+details pre {
+    padding-left: 2% !important;
+    padding-bottom: 2% !important;
+    margin-bottom: 2% !important;
+}
+
+.lm-Widget.lm-Panel.jupyter-widgets.widget-output.chat-scrollbox {
+    background-color: white !important;
+}
+
+.lm-Widget.lm-Panel.jupyter-widgets.widget-output.chat-scrollbox .jp-OutputArea-output {
+    background-color: white !important;
+}
+
+/* text box fix for dark mode */
+.lm-Widget.lm-Panel.jupyter-widgets.widget-output.chat-scrollbox .jp-OutputArea-output pre {
+    color: black !important;
+}
+
+.chat-inputbox.widget-hbox {
+    background-color: white !important;
+}

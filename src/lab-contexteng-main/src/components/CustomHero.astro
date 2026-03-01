@@ -1,0 +1,173 @@
+---
+import { config } from "../../lab-config";
+const heroData = config.hero;
+
+---
+
+<style>
+    .container {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+    }
+
+    .logo {
+        padding-bottom: 4%;
+    }
+
+    .content-wrapper {
+        max-width: 48rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .badge {
+        display: inline-block;
+        margin-bottom: 2rem;
+        border-radius: 9999px;
+        background-color: rgba(229, 62, 62, 0.1);
+        padding: 0.5rem 1rem;
+    }
+
+    .badge-text {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #FF4438;
+    }
+
+    .title,
+    #tagline {
+        font-family: "Space Grotesk", sans-serif;
+        margin-bottom: 1.5rem;
+        font-size: 3rem;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        color: #091A23 !important;
+        line-height: 1.1;
+    }
+
+    .title-highlight {
+        display: block;
+        color: #FF4438;
+    }
+
+    .subtitle {
+        font-family: "Space Grotesk", sans-serif;
+        margin-bottom: 3rem;
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: #091A23;
+    }
+
+    .cta-button.hero-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        height: 3.5rem;
+        padding: 0 2.5rem;
+        border-radius: 0.5rem;
+        background-color: #FF4438 !important;
+        border: 1px solid #D1281E !important;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .cta-button.hero-cta:hover {
+        background-color: #FF4438 !important;
+        border-color: #E4291E !important;
+        transform: none !important;
+    }
+
+    .arrow-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .arrow-icon {
+        transform: translateX(0.25rem);
+    }
+
+    @media (min-width: 640px) {
+        .title {
+            font-size: 3.75rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .title {
+            font-size: 4.5rem;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+        }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+        .container {
+            background-color: #091A23;
+        }
+
+        .title,
+        #tagline {
+            color: #ffffff !important;
+        }
+
+        .subtitle {
+            color: #ffffff;
+        }
+
+        .cta-button.hero-cta {
+            background-color: #351D22 !important;
+            border-color: #FF4438 !important;
+        }
+
+        .cta-button.hero-cta:hover {
+            background-color: #8A221C !important;
+            border-color: #EB352A !important;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="content-wrapper">
+        <!-- Logo/Badge -->
+        <div class="logo">
+            <img
+                src="/assets/redis_logo.png"
+                alt="Redis University Lab"
+                width="23%"
+            />
+        </div>
+
+        <!-- Main Title -->
+        <h1 id="tagline" class="title">{heroData.tagline}</h1>
+
+        <!-- Subtitle -->
+        <p class="subtitle">{heroData.subtitle}</p>
+
+        <!-- CTA Button -->
+        <a href={heroData.homeLink} class="cta-button hero-cta">
+            Get Started
+            <svg
+                class="arrow-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+            </svg>
+        </a>
+    </div>
+</div>
