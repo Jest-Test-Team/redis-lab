@@ -1,18 +1,19 @@
-# 蜃景交易所 — 方案 2 極限壓縮：Render Blueprint
-# 使用「包含此檔的 repo」：在 Render 建立 Blueprint 時連接你的 GitHub redis-lab-app 即可，勿寫死 repo URL。
-# 僅 Gateway 對外；Redis 與 Engine 為內網服務。Identity 不部署，由 Gateway 內建 fallback。
+# 蜃景交易所 — 方案 2 極限壓縮：Render Blueprint（全 free tier）
+# Free plan 不支援 pserv，故：Redis 改用 Render Key Value；Engine 改為 web（仍僅由 Gateway 內網呼叫）。
+# 使用「包含此檔的 repo」：在 Render 建立 Blueprint 時連接你的 GitHub redis-lab-app。
 
 version: "1"
 services:
-  # 1. 核心記憶體：Redis（Private Service，免費重啟會遺失資料，符合「瞬時消失」設定）
-  - type: pserv
+  # 1. 核心記憶體：Render Key Value（Redis 相容，free tier）
+  - type: keyvalue
     name: mirage-redis
-    runtime: docker
-    dockerfilePath: ./packages/redis/Dockerfile
     plan: free
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: allow all
 
-  # 2. 地獄火撮合引擎：Rust（內網，不對外）
-  - type: pserv
+  # 2. 地獄火撮合引擎：Rust（web 型態才能在 free 部署，Gateway 以內網 hostname 呼叫）
+  - type: web
     name: mirage-engine
     runtime: rust
     plan: free
@@ -20,11 +21,14 @@ services:
     startCommand: ./target/release/mirage-engine
     envVars:
       - key: REDIS_ADDR
-        value: redis://mirage-redis:6379/
+        fromService:
+          type: keyvalue
+          name: mirage-redis
+          property: connectionString
       - key: PORT
         value: "8081"
 
-  # 3. 邊界閘道器：Go（唯一對外 Web Service） Go 1.21
+  # 3. 邊界閘道器：Go（唯一對外 Web Service）
   - type: web
     name: mirage-gateway
     runtime: go
@@ -35,9 +39,15 @@ services:
       - key: PORT
         value: "8080"
       - key: REDIS_ADDR
-        value: mirage-redis:6379
+        fromService:
+          type: keyvalue
+          name: mirage-redis
+          property: connectionString
       - key: ENGINE_URL
-        value: http://mirage-engine:8081
+        fromService:
+          type: web
+          name: mirage-engine
+          property: hostport
       # 不設 IDENTITY_URL，使用 Gateway 內建虛擬 ID fallback
       - key: GIN_MODE
         value: release
