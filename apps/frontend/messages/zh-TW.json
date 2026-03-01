@@ -1,0 +1,20 @@
+{
+  "title": "［蜃景交易所］ MIRAGE EXCHANGE",
+  "subtitle": "極短線拍賣 · 身份洗牌 · 死間開關 — 研究用雛形",
+  "connectionStatus": "連線狀態",
+  "gatewayWs": "閘道 WebSocket",
+  "connected": "已連線",
+  "disconnected": "未連線",
+  "virtualId": "虛擬 ID",
+  "lastEvent": "最後事件",
+  "liveLog": "即時日誌",
+  "logWaiting": "等待事件…",
+  "footer": "本專案為高併發與分散式系統研究用，請勿用於非法商業用途。",
+  "localeZh": "繁中",
+  "localeEn": "EN",
+  "logConnected": "WebSocket 已連線",
+  "logDisconnected": "WebSocket 已斷線",
+  "logError": "WebSocket 錯誤",
+  "logEvent": "事件",
+  "logParseError": "無法解析訊息"
+}

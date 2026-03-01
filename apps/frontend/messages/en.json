@@ -1,0 +1,20 @@
+{
+  "title": "［MIRAGE EXCHANGE］",
+  "subtitle": "Micro-auction · Identity shuffle · Dead man's switch — Research prototype",
+  "connectionStatus": "Connection",
+  "gatewayWs": "Gateway WebSocket",
+  "connected": "Connected",
+  "disconnected": "Disconnected",
+  "virtualId": "Virtual ID",
+  "lastEvent": "Last event",
+  "liveLog": "Live log",
+  "logWaiting": "Waiting for events…",
+  "footer": "This project is for high-concurrency and distributed systems research only. Do not use for illegal or commercial purposes.",
+  "localeZh": "繁中",
+  "localeEn": "EN",
+  "logConnected": "WebSocket connected",
+  "logDisconnected": "WebSocket disconnected",
+  "logError": "WebSocket error",
+  "logEvent": "Event",
+  "logParseError": "Failed to parse message"
+}
