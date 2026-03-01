@@ -25,8 +25,6 @@ services:
           type: keyvalue
           name: mirage-redis
           property: connectionString
-      - key: PORT
-        value: "8081"
 
   # 3. 邊界閘道器：Go（唯一對外 Web Service）
   - type: web
@@ -36,8 +34,6 @@ services:
     buildCommand: cd apps/gateway && go build -o bin/gateway .
     startCommand: ./apps/gateway/bin/gateway
     envVars:
-      - key: PORT
-        value: "8080"
       - key: REDIS_ADDR
         fromService:
           type: keyvalue

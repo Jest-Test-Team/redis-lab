@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 	"sync"
 	"time"
 
@@ -90,10 +91,22 @@ func (h *hub) broadcastAuction(event string, payload interface{}) {
 
 func main() {
 	engineURL := getEnv("ENGINE_URL", engineURLDefault)
+	if engineURL != "" && !strings.HasPrefix(engineURL, "http://") && !strings.HasPrefix(engineURL, "https://") {
+		engineURL = "http://" + engineURL
+	}
 	identityURL := getEnv("IDENTITY_URL", identityURLDefault)
 	redisAddr := getEnv("REDIS_ADDR", redisAddrDefault)
 
-	rdb := redis.NewClient(&redis.Options{Addr: redisAddr})
+	var rdb *redis.Client
+	if strings.HasPrefix(redisAddr, "redis://") {
+		opt, err := redis.ParseURL(redisAddr)
+		if err != nil {
+			log.Fatalf("redis parse URL: %v", err)
+		}
+		rdb = redis.NewClient(opt)
+	} else {
+		rdb = redis.NewClient(&redis.Options{Addr: redisAddr})
+	}
 	ctx := context.Background()
 	if err := rdb.Ping(ctx).Err(); err != nil {
 		log.Printf("redis ping: %v (continuing)", err)
@@ -170,7 +183,8 @@ func main() {
 		r.GET("/api/identity/token", proxyGetToken(identityURL))
 	}
 
-	if err := r.Run(":8080"); err != nil {
+	port := getEnv("PORT", "8080")
+	if err := r.Run(":" + port); err != nil {
 		log.Fatal(err)
 	}
 }
