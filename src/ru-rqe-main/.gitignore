@@ -1,0 +1,10 @@
+env
+output
+__pycache__*
+.DS_Store
+*.tmp
+*.swp
+*.log
+*.bak
+output.txt
+redisdata/

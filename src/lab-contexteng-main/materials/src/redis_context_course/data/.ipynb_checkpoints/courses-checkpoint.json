@@ -1,0 +1,2353 @@
+{
+  "courses": [
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X611",
+      "course_code": "CS001",
+      "title": "Introduction to Programming",
+      "description": "Foundational programming concepts using Python. This course introduces students to computational thinking, problem-solving, and programming fundamentals. No prior experience required. Students will learn variables, control flow, functions, data structures, and object-oriented programming through hands-on projects.",
+      "credits": 3,
+      "difficulty_level": "beginner",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Allison Hill",
+      "max_enrollment": 32,
+      "current_enrollment": 0,
+      "tags": [
+        "programming",
+        "python",
+        "beginner",
+        "fundamentals",
+        "programming",
+        "python",
+        "beginner",
+        "fundamentals"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in introduction to programming",
+        "Implement introduction to programming algorithms and techniques",
+        "Apply introduction to programming to real-world problems",
+        "Analyze and evaluate introduction to programming solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304465",
+      "updated_at": "2025-12-05T11:53:05.304473"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X612",
+      "course_code": "CS002",
+      "title": "Data Structures and Algorithms",
+      "description": "Essential data structures and algorithmic problem-solving. This course covers arrays, linked lists, stacks, queues, trees, graphs, and hash tables. Students will analyze algorithm complexity and implement efficient solutions to computational problems.",
+      "credits": 4,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS001",
+          "course_title": "Prerequisite for Data Structures and Algorithms",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Noah Rhodes",
+      "max_enrollment": 30,
+      "current_enrollment": 0,
+      "tags": [
+        "algorithms",
+        "data structures",
+        "complexity",
+        "problem solving",
+        "algorithms",
+        "data structures",
+        "complexity",
+        "problem solving"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in data structures and algorithms",
+        "Implement data structures and algorithms algorithms and techniques",
+        "Apply data structures and algorithms to real-world problems",
+        "Analyze and evaluate data structures and algorithms solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304500",
+      "updated_at": "2025-12-05T11:53:05.304502"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X613",
+      "course_code": "CS003",
+      "title": "Database Systems",
+      "description": "Relational databases, SQL, and data modeling. This course covers database design, normalization, SQL programming, and transaction management. Students will design and implement databases for real-world applications.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Angie Henderson",
+      "max_enrollment": 32,
+      "current_enrollment": 0,
+      "tags": [
+        "databases",
+        "sql",
+        "data modeling",
+        "postgresql",
+        "databases",
+        "sql",
+        "data modeling",
+        "postgresql"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in database systems",
+        "Implement database systems algorithms and techniques",
+        "Apply database systems to real-world problems",
+        "Analyze and evaluate database systems solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304516",
+      "updated_at": "2025-12-05T11:53:05.304517"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X614",
+      "course_code": "CS004",
+      "title": "Web Development",
+      "description": "Full-stack web development with modern frameworks. Students will build responsive web applications using HTML, CSS, JavaScript, React, and Node.js. Topics include REST APIs, authentication, and deployment.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "in_person",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Daniel Wagner",
+      "max_enrollment": 72,
+      "current_enrollment": 0,
+      "tags": [
+        "web development",
+        "javascript",
+        "react",
+        "full stack",
+        "web development",
+        "javascript",
+        "react",
+        "full stack"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in web development",
+        "Implement web development algorithms and techniques",
+        "Apply web development to real-world problems",
+        "Analyze and evaluate web development solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304530",
+      "updated_at": "2025-12-05T11:53:05.304532"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X615",
+      "course_code": "CS005",
+      "title": "Software Engineering",
+      "description": "Software development lifecycle, design patterns, and best practices. This course covers requirements analysis, system design, testing, and maintenance. Students will work in teams to build a substantial software project using agile methodologies.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Cristian Santos",
+      "max_enrollment": 74,
+      "current_enrollment": 0,
+      "tags": [
+        "software engineering",
+        "design patterns",
+        "agile",
+        "testing",
+        "software engineering",
+        "design patterns",
+        "agile",
+        "testing"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in software engineering",
+        "Implement software engineering algorithms and techniques",
+        "Apply software engineering to real-world problems",
+        "Analyze and evaluate software engineering solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304544",
+      "updated_at": "2025-12-05T11:53:05.304545"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X616",
+      "course_code": "CS006",
+      "title": "Operating Systems",
+      "description": "Process management, memory, file systems, and concurrency. This course explores how operating systems manage hardware resources and provide services to applications. Topics include scheduling, virtual memory, and synchronization.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS002",
+          "course_title": "Prerequisite for Operating Systems",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Connie Lawrence",
+      "max_enrollment": 73,
+      "current_enrollment": 0,
+      "tags": [
+        "operating systems",
+        "processes",
+        "memory",
+        "concurrency",
+        "operating systems",
+        "processes",
+        "memory",
+        "concurrency"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in operating systems",
+        "Implement operating systems algorithms and techniques",
+        "Apply operating systems to real-world problems",
+        "Analyze and evaluate operating systems solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304556",
+      "updated_at": "2025-12-05T11:53:05.304556"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X617",
+      "course_code": "CS007",
+      "title": "Computer Networks",
+      "description": "Network protocols, architecture, and internet technologies. This course covers the OSI model, TCP/IP, routing, and network security. Students will analyze network traffic and implement network applications.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": null,
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Abigail Shaffer",
+      "max_enrollment": 71,
+      "current_enrollment": 0,
+      "tags": [
+        "networking",
+        "protocols",
+        "tcp/ip",
+        "security",
+        "networking",
+        "protocols",
+        "tcp/ip",
+        "security"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in computer networks",
+        "Implement computer networks algorithms and techniques",
+        "Apply computer networks to real-world problems",
+        "Analyze and evaluate computer networks solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304568",
+      "updated_at": "2025-12-05T11:53:05.304569"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X618",
+      "course_code": "CS008",
+      "title": "Cybersecurity Fundamentals",
+      "description": "Security principles, cryptography, and threat mitigation. This course introduces cybersecurity concepts including encryption, authentication, network security, and secure coding practices. Students will learn to identify and mitigate common vulnerabilities.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": null,
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Gina Moore",
+      "max_enrollment": 38,
+      "current_enrollment": 0,
+      "tags": [
+        "cybersecurity",
+        "cryptography",
+        "security",
+        "encryption",
+        "cybersecurity",
+        "cryptography",
+        "security",
+        "encryption"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in cybersecurity fundamentals",
+        "Implement cybersecurity fundamentals algorithms and techniques",
+        "Apply cybersecurity fundamentals to real-world problems",
+        "Analyze and evaluate cybersecurity fundamentals solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304578",
+      "updated_at": "2025-12-05T11:53:05.304579"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X619",
+      "course_code": "CS009",
+      "title": "Cloud Computing",
+      "description": "Cloud platforms, distributed systems, and scalable architectures. This course covers AWS, Azure, containerization with Docker, orchestration with Kubernetes, and microservices architecture. Students will deploy and scale cloud applications.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS007",
+          "course_title": "Prerequisite for Cloud Computing",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Gabrielle Davis",
+      "max_enrollment": 63,
+      "current_enrollment": 0,
+      "tags": [
+        "cloud computing",
+        "aws",
+        "docker",
+        "kubernetes",
+        "cloud computing",
+        "aws",
+        "docker",
+        "kubernetes"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in cloud computing",
+        "Implement cloud computing algorithms and techniques",
+        "Apply cloud computing to real-world problems",
+        "Analyze and evaluate cloud computing solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304588",
+      "updated_at": "2025-12-05T11:53:05.304589"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61A",
+      "course_code": "CS010",
+      "title": "Machine Learning Fundamentals",
+      "description": "Introduction to machine learning algorithms and applications. This course covers supervised and unsupervised learning, neural networks, and deep learning. Students will learn to implement ML algorithms from scratch and use popular frameworks like scikit-learn and TensorFlow.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "online",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS002",
+          "course_title": "Prerequisite for Machine Learning Fundamentals",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        },
+        {
+          "course_code": "MATH020",
+          "course_title": "Prerequisite for Machine Learning Fundamentals",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Ryan Munoz",
+      "max_enrollment": 76,
+      "current_enrollment": 0,
+      "tags": [
+        "machine learning",
+        "ai",
+        "data science",
+        "python",
+        "machine learning",
+        "ai",
+        "data science",
+        "python"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in machine learning fundamentals",
+        "Implement machine learning fundamentals algorithms and techniques",
+        "Apply machine learning fundamentals to real-world problems",
+        "Analyze and evaluate machine learning fundamentals solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304598",
+      "updated_at": "2025-12-05T11:53:05.304599"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61B",
+      "course_code": "CS011",
+      "title": "Deep Learning and Neural Networks",
+      "description": "Advanced neural network architectures and deep learning techniques. This course explores convolutional neural networks, recurrent networks, transformers, and generative models. Students will implement state-of-the-art architectures using PyTorch and apply them to real-world problems in vision, language, and beyond.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS010",
+          "course_title": "Prerequisite for Deep Learning and Neural Networks",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Monica Herrera",
+      "max_enrollment": 68,
+      "current_enrollment": 0,
+      "tags": [
+        "deep learning",
+        "neural networks",
+        "pytorch",
+        "ai",
+        "deep learning",
+        "neural networks",
+        "pytorch",
+        "ai"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in deep learning and neural networks",
+        "Implement deep learning and neural networks algorithms and techniques",
+        "Apply deep learning and neural networks to real-world problems",
+        "Analyze and evaluate deep learning and neural networks solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304608",
+      "updated_at": "2025-12-05T11:53:05.304609"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61C",
+      "course_code": "CS012",
+      "title": "Natural Language Processing",
+      "description": "Text processing, language models, and NLP applications. This course covers the fundamentals of computational linguistics, from tokenization to large language models. Students will build text classifiers, named entity recognizers, and chatbots using modern NLP techniques and transformer-based models.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS010",
+          "course_title": "Prerequisite for Natural Language Processing",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Jamie Arnold",
+      "max_enrollment": 38,
+      "current_enrollment": 0,
+      "tags": [
+        "nlp",
+        "language models",
+        "transformers",
+        "text processing",
+        "nlp",
+        "language models",
+        "transformers",
+        "text processing"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in natural language processing",
+        "Implement natural language processing algorithms and techniques",
+        "Apply natural language processing to real-world problems",
+        "Analyze and evaluate natural language processing solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304619",
+      "updated_at": "2025-12-05T11:53:05.304619"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61D",
+      "course_code": "CS013",
+      "title": "Computer Vision",
+      "description": "Image processing, object detection, and visual recognition. This course teaches how computers interpret visual information, from basic image processing to advanced deep learning for vision. Students will implement object detection, image segmentation, and facial recognition systems.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "online",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS010",
+          "course_title": "Prerequisite for Computer Vision",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Lisa Hensley",
+      "max_enrollment": 58,
+      "current_enrollment": 0,
+      "tags": [
+        "computer vision",
+        "image processing",
+        "object detection",
+        "deep learning",
+        "computer vision",
+        "image processing",
+        "object detection",
+        "deep learning"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in computer vision",
+        "Implement computer vision algorithms and techniques",
+        "Apply computer vision to real-world problems",
+        "Analyze and evaluate computer vision solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304628",
+      "updated_at": "2025-12-05T11:53:05.304629"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61E",
+      "course_code": "CS014",
+      "title": "Data Science and Analytics",
+      "description": "Data analysis, visualization, and statistical modeling. This course teaches data wrangling, exploratory data analysis, and statistical inference using Python. Students will work with pandas, matplotlib, and scikit-learn to extract insights from real-world datasets.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "in_person",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Michele Williams",
+      "max_enrollment": 44,
+      "current_enrollment": 0,
+      "tags": [
+        "data science",
+        "analytics",
+        "statistics",
+        "visualization",
+        "data science",
+        "analytics",
+        "statistics",
+        "visualization"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in data science and analytics",
+        "Implement data science and analytics algorithms and techniques",
+        "Apply data science and analytics to real-world problems",
+        "Analyze and evaluate data science and analytics solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304638",
+      "updated_at": "2025-12-05T11:53:05.304638"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61F",
+      "course_code": "CS015",
+      "title": "Mobile App Development",
+      "description": "iOS and Android development with React Native. This course covers mobile UI design, navigation, state management, and API integration. Students will build and deploy cross-platform mobile applications.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Dylan Miller",
+      "max_enrollment": 45,
+      "current_enrollment": 0,
+      "tags": [
+        "mobile development",
+        "react native",
+        "ios",
+        "android",
+        "mobile development",
+        "react native",
+        "ios",
+        "android"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in mobile app development",
+        "Implement mobile app development algorithms and techniques",
+        "Apply mobile app development to real-world problems",
+        "Analyze and evaluate mobile app development solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304647",
+      "updated_at": "2025-12-05T11:53:05.304648"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61G",
+      "course_code": "CS016",
+      "title": "Artificial Intelligence",
+      "description": "Search algorithms, knowledge representation, and AI agents. This course covers classical AI techniques including search, logic, planning, and reasoning. Students will implement intelligent agents and explore modern AI applications.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS002",
+          "course_title": "Prerequisite for Artificial Intelligence",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Brian Ramirez",
+      "max_enrollment": 33,
+      "current_enrollment": 0,
+      "tags": [
+        "artificial intelligence",
+        "search",
+        "logic",
+        "agents",
+        "artificial intelligence",
+        "search",
+        "logic",
+        "agents"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in artificial intelligence",
+        "Implement artificial intelligence algorithms and techniques",
+        "Apply artificial intelligence to real-world problems",
+        "Analyze and evaluate artificial intelligence solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304656",
+      "updated_at": "2025-12-05T11:53:05.304657"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61H",
+      "course_code": "CS017",
+      "title": "Reinforcement Learning",
+      "description": "Agent learning through interaction and reward signals. This course covers MDPs, Q-learning, policy gradients, and deep reinforcement learning. Students will train agents to play games and solve control problems.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "in_person",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS010",
+          "course_title": "Prerequisite for Reinforcement Learning",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Holly Wood",
+      "max_enrollment": 58,
+      "current_enrollment": 0,
+      "tags": [
+        "reinforcement learning",
+        "q-learning",
+        "deep rl",
+        "agents",
+        "reinforcement learning",
+        "q-learning",
+        "deep rl",
+        "agents"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in reinforcement learning",
+        "Implement reinforcement learning algorithms and techniques",
+        "Apply reinforcement learning to real-world problems",
+        "Analyze and evaluate reinforcement learning solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304666",
+      "updated_at": "2025-12-05T11:53:05.304667"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61J",
+      "course_code": "CS018",
+      "title": "Big Data Technologies",
+      "description": "Hadoop, Spark, and distributed data processing. This course covers big data architectures, MapReduce, Spark, and stream processing. Students will process large-scale datasets using distributed computing frameworks.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "in_person",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [
+        {
+          "course_code": "CS003",
+          "course_title": "Prerequisite for Big Data Technologies",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Derek Zuniga",
+      "max_enrollment": 54,
+      "current_enrollment": 0,
+      "tags": [
+        "big data",
+        "hadoop",
+        "spark",
+        "distributed systems",
+        "big data",
+        "hadoop",
+        "spark",
+        "distributed systems"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in big data technologies",
+        "Implement big data technologies algorithms and techniques",
+        "Apply big data technologies to real-world problems",
+        "Analyze and evaluate big data technologies solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304675",
+      "updated_at": "2025-12-05T11:53:05.304676"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61K",
+      "course_code": "CS019",
+      "title": "Human-Computer Interaction",
+      "description": "User interface design, usability, and user experience. This course covers design principles, prototyping, user research, and evaluation methods. Students will design and test interactive systems.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Computer Science",
+      "major": "Computer Science",
+      "prerequisites": [],
+      "schedule": null,
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Lisa Jackson",
+      "max_enrollment": 33,
+      "current_enrollment": 0,
+      "tags": [
+        "hci",
+        "ui design",
+        "ux",
+        "usability",
+        "hci",
+        "ui design",
+        "ux",
+        "usability"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in human-computer interaction",
+        "Implement human-computer interaction algorithms and techniques",
+        "Apply human-computer interaction to real-world problems",
+        "Analyze and evaluate human-computer interaction solutions",
+        "Design and build complete computer science systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304685",
+      "updated_at": "2025-12-05T11:53:05.304686"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61M",
+      "course_code": "MATH020",
+      "title": "Linear Algebra for Machine Learning",
+      "description": "Vectors, matrices, and linear transformations for ML applications. This course provides the mathematical foundation essential for understanding machine learning algorithms. Topics include vector spaces, eigenvalues, SVD, and their applications in dimensionality reduction, recommendation systems, and neural networks.",
+      "credits": 4,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Carla Gray",
+      "max_enrollment": 41,
+      "current_enrollment": 0,
+      "tags": [
+        "linear algebra",
+        "mathematics",
+        "machine learning",
+        "vectors",
+        "linear algebra",
+        "mathematics",
+        "machine learning",
+        "vectors"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in linear algebra for machine learning",
+        "Implement linear algebra for machine learning algorithms and techniques",
+        "Apply linear algebra for machine learning to real-world problems",
+        "Analyze and evaluate linear algebra for machine learning solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304694",
+      "updated_at": "2025-12-05T11:53:05.304695"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61N",
+      "course_code": "MATH021",
+      "title": "Pre-Calculus",
+      "description": "Functions, trigonometry, and preparation for calculus. This course builds the algebraic and trigonometric foundations needed for success in calculus. Students will master functions, graphs, exponentials, logarithms, and trigonometric identities through problem-solving and applications.",
+      "credits": 3,
+      "difficulty_level": "beginner",
+      "format": "online",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [],
+      "schedule": null,
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Margaret Hawkins DDS",
+      "max_enrollment": 46,
+      "current_enrollment": 0,
+      "tags": [
+        "precalculus",
+        "algebra",
+        "trigonometry",
+        "functions",
+        "precalculus",
+        "algebra",
+        "trigonometry",
+        "functions"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in pre-calculus",
+        "Implement pre-calculus algorithms and techniques",
+        "Apply pre-calculus to real-world problems",
+        "Analyze and evaluate pre-calculus solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304704",
+      "updated_at": "2025-12-05T11:53:05.304705"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61P",
+      "course_code": "MATH022",
+      "title": "Calculus I",
+      "description": "Limits, derivatives, and introduction to integration. This course covers single-variable calculus, including limits, continuity, differentiation, and basic integration. Students will apply calculus to optimization problems, related rates, and area calculations.",
+      "credits": 4,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [
+        {
+          "course_code": "MATH021",
+          "course_title": "Prerequisite for Calculus I",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Patty Perez",
+      "max_enrollment": 34,
+      "current_enrollment": 0,
+      "tags": [
+        "calculus",
+        "derivatives",
+        "integrals",
+        "mathematics",
+        "calculus",
+        "derivatives",
+        "integrals",
+        "mathematics"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in calculus i",
+        "Implement calculus i algorithms and techniques",
+        "Apply calculus i to real-world problems",
+        "Analyze and evaluate calculus i solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304713",
+      "updated_at": "2025-12-05T11:53:05.304714"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61Q",
+      "course_code": "MATH023",
+      "title": "Calculus II",
+      "description": "Integration techniques, sequences, series, and parametric equations. This course continues single-variable calculus with advanced integration methods, infinite series, and parametric curves. Applications include arc length, surface area, and Taylor series.",
+      "credits": 4,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [
+        {
+          "course_code": "MATH022",
+          "course_title": "Prerequisite for Calculus II",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Ethan Adams",
+      "max_enrollment": 72,
+      "current_enrollment": 0,
+      "tags": [
+        "calculus",
+        "integration",
+        "series",
+        "mathematics",
+        "calculus",
+        "integration",
+        "series",
+        "mathematics"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in calculus ii",
+        "Implement calculus ii algorithms and techniques",
+        "Apply calculus ii to real-world problems",
+        "Analyze and evaluate calculus ii solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304724",
+      "updated_at": "2025-12-05T11:53:05.304725"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61R",
+      "course_code": "MATH024",
+      "title": "Multivariable Calculus",
+      "description": "Calculus of functions of several variables. This course extends calculus to multiple dimensions, covering partial derivatives, multiple integrals, vector calculus, and applications to physics and engineering.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [
+        {
+          "course_code": "MATH023",
+          "course_title": "Prerequisite for Multivariable Calculus",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Tommy Walter",
+      "max_enrollment": 43,
+      "current_enrollment": 0,
+      "tags": [
+        "calculus",
+        "multivariable",
+        "vector calculus",
+        "mathematics",
+        "calculus",
+        "multivariable",
+        "vector calculus",
+        "mathematics"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in multivariable calculus",
+        "Implement multivariable calculus algorithms and techniques",
+        "Apply multivariable calculus to real-world problems",
+        "Analyze and evaluate multivariable calculus solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304733",
+      "updated_at": "2025-12-05T11:53:05.304734"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61S",
+      "course_code": "MATH025",
+      "title": "Differential Equations",
+      "description": "Ordinary differential equations and applications. This course covers first and second-order ODEs, systems of equations, and Laplace transforms. Applications include population dynamics, circuits, and mechanical systems.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "in_person",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [
+        {
+          "course_code": "MATH022",
+          "course_title": "Prerequisite for Differential Equations",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Matthew Foster",
+      "max_enrollment": 40,
+      "current_enrollment": 0,
+      "tags": [
+        "differential equations",
+        "odes",
+        "mathematics",
+        "modeling",
+        "differential equations",
+        "odes",
+        "mathematics",
+        "modeling"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in differential equations",
+        "Implement differential equations algorithms and techniques",
+        "Apply differential equations to real-world problems",
+        "Analyze and evaluate differential equations solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304743",
+      "updated_at": "2025-12-05T11:53:05.304743"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61T",
+      "course_code": "MATH026",
+      "title": "Probability and Statistics",
+      "description": "Probability theory, distributions, and statistical inference. This course covers probability axioms, random variables, common distributions, hypothesis testing, and regression. Students will apply statistical methods to real-world data.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Judy Baker",
+      "max_enrollment": 57,
+      "current_enrollment": 0,
+      "tags": [
+        "probability",
+        "statistics",
+        "inference",
+        "data analysis",
+        "probability",
+        "statistics",
+        "inference",
+        "data analysis"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in probability and statistics",
+        "Implement probability and statistics algorithms and techniques",
+        "Apply probability and statistics to real-world problems",
+        "Analyze and evaluate probability and statistics solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304752",
+      "updated_at": "2025-12-05T11:53:05.304752"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61V",
+      "course_code": "MATH027",
+      "title": "Discrete Mathematics",
+      "description": "Logic, sets, combinatorics, and graph theory. This course provides the mathematical foundations for computer science, covering propositional logic, proof techniques, counting, and discrete structures.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Justin Baker",
+      "max_enrollment": 45,
+      "current_enrollment": 0,
+      "tags": [
+        "discrete math",
+        "logic",
+        "combinatorics",
+        "graph theory",
+        "discrete math",
+        "logic",
+        "combinatorics",
+        "graph theory"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in discrete mathematics",
+        "Implement discrete mathematics algorithms and techniques",
+        "Apply discrete mathematics to real-world problems",
+        "Analyze and evaluate discrete mathematics solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304762",
+      "updated_at": "2025-12-05T11:53:05.304762"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61W",
+      "course_code": "MATH028",
+      "title": "Abstract Algebra",
+      "description": "Groups, rings, and fields. This course introduces abstract algebraic structures and their properties. Topics include group theory, ring theory, and applications to cryptography and coding theory.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "online",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [
+        {
+          "course_code": "MATH027",
+          "course_title": "Prerequisite for Abstract Algebra",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Stephanie Ross",
+      "max_enrollment": 60,
+      "current_enrollment": 0,
+      "tags": [
+        "abstract algebra",
+        "groups",
+        "rings",
+        "mathematics",
+        "abstract algebra",
+        "groups",
+        "rings",
+        "mathematics"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in abstract algebra",
+        "Implement abstract algebra algorithms and techniques",
+        "Apply abstract algebra to real-world problems",
+        "Analyze and evaluate abstract algebra solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304771",
+      "updated_at": "2025-12-05T11:53:05.304772"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61X",
+      "course_code": "MATH029",
+      "title": "Numerical Analysis",
+      "description": "Numerical methods for solving mathematical problems. This course covers algorithms for root finding, interpolation, numerical integration, and solving differential equations. Students will implement methods in Python or MATLAB.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "online",
+      "department": "Mathematics",
+      "major": "Mathematics",
+      "prerequisites": [
+        {
+          "course_code": "MATH022",
+          "course_title": "Prerequisite for Numerical Analysis",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Zachary Hicks",
+      "max_enrollment": 71,
+      "current_enrollment": 0,
+      "tags": [
+        "numerical analysis",
+        "algorithms",
+        "computation",
+        "mathematics",
+        "numerical analysis",
+        "algorithms",
+        "computation",
+        "mathematics"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in numerical analysis",
+        "Implement numerical analysis algorithms and techniques",
+        "Apply numerical analysis to real-world problems",
+        "Analyze and evaluate numerical analysis solutions",
+        "Design and build complete mathematics systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304780",
+      "updated_at": "2025-12-05T11:53:05.304781"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61Y",
+      "course_code": "BIO030",
+      "title": "Molecular Biology and Genetics",
+      "description": "DNA, RNA, protein synthesis, and genetic inheritance. This course explores the molecular basis of life, from DNA replication to gene expression. Students will learn about genetic mutations, inheritance patterns, and modern techniques like PCR and CRISPR. Laboratory sessions provide hands-on experience with molecular biology techniques.",
+      "credits": 4,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO032",
+          "course_title": "Prerequisite for Molecular Biology and Genetics",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Anthony Rodriguez",
+      "max_enrollment": 57,
+      "current_enrollment": 0,
+      "tags": [
+        "biology",
+        "genetics",
+        "dna",
+        "molecular biology",
+        "biology",
+        "genetics",
+        "dna",
+        "molecular biology"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in molecular biology and genetics",
+        "Implement molecular biology and genetics algorithms and techniques",
+        "Apply molecular biology and genetics to real-world problems",
+        "Analyze and evaluate molecular biology and genetics solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304789",
+      "updated_at": "2025-12-05T11:53:05.304790"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X61Z",
+      "course_code": "BIO031",
+      "title": "Marine Ecology and Conservation",
+      "description": "Ocean ecosystems, biodiversity, and conservation strategies. This course examines marine habitats from coral reefs to deep sea vents, exploring species interactions, food webs, and human impacts. Students will analyze case studies of marine conservation efforts and develop proposals for protecting endangered marine ecosystems.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Rebecca Henderson",
+      "max_enrollment": 53,
+      "current_enrollment": 0,
+      "tags": [
+        "marine biology",
+        "ecology",
+        "conservation",
+        "oceanography",
+        "marine biology",
+        "ecology",
+        "conservation",
+        "oceanography"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in marine ecology and conservation",
+        "Implement marine ecology and conservation algorithms and techniques",
+        "Apply marine ecology and conservation to real-world problems",
+        "Analyze and evaluate marine ecology and conservation solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304798",
+      "updated_at": "2025-12-05T11:53:05.304799"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X620",
+      "course_code": "BIO032",
+      "title": "Introduction to Biology",
+      "description": "Fundamental concepts of life, cells, and evolution. This introductory course covers cell structure, metabolism, genetics, evolution, and ecology. Designed for non-majors and beginning biology students.",
+      "credits": 3,
+      "difficulty_level": "beginner",
+      "format": "online",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [],
+      "schedule": null,
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "James Ferrell",
+      "max_enrollment": 74,
+      "current_enrollment": 0,
+      "tags": [
+        "biology",
+        "cells",
+        "evolution",
+        "introductory",
+        "biology",
+        "cells",
+        "evolution",
+        "introductory"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in introduction to biology",
+        "Implement introduction to biology algorithms and techniques",
+        "Apply introduction to biology to real-world problems",
+        "Analyze and evaluate introduction to biology solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304807",
+      "updated_at": "2025-12-05T11:53:05.304808"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X621",
+      "course_code": "BIO033",
+      "title": "Human Anatomy and Physiology",
+      "description": "Structure and function of human body systems. This course examines the organization of the human body from cells to organ systems. Topics include skeletal, muscular, nervous, cardiovascular, and other major systems.",
+      "credits": 4,
+      "difficulty_level": "intermediate",
+      "format": "in_person",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO032",
+          "course_title": "Prerequisite for Human Anatomy and Physiology",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Tricia Valencia",
+      "max_enrollment": 48,
+      "current_enrollment": 0,
+      "tags": [
+        "anatomy",
+        "physiology",
+        "human biology",
+        "health",
+        "anatomy",
+        "physiology",
+        "human biology",
+        "health"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in human anatomy and physiology",
+        "Implement human anatomy and physiology algorithms and techniques",
+        "Apply human anatomy and physiology to real-world problems",
+        "Analyze and evaluate human anatomy and physiology solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304816",
+      "updated_at": "2025-12-05T11:53:05.304817"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X622",
+      "course_code": "BIO034",
+      "title": "Microbiology",
+      "description": "Bacteria, viruses, fungi, and their roles in health and disease. This course covers microbial structure, metabolism, genetics, and interactions with humans. Laboratory work includes culturing and identifying microorganisms.",
+      "credits": 4,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO032",
+          "course_title": "Prerequisite for Microbiology",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Nathan Maldonado",
+      "max_enrollment": 48,
+      "current_enrollment": 0,
+      "tags": [
+        "microbiology",
+        "bacteria",
+        "viruses",
+        "pathogens",
+        "microbiology",
+        "bacteria",
+        "viruses",
+        "pathogens"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in microbiology",
+        "Implement microbiology algorithms and techniques",
+        "Apply microbiology to real-world problems",
+        "Analyze and evaluate microbiology solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304825",
+      "updated_at": "2025-12-05T11:53:05.304826"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X623",
+      "course_code": "BIO035",
+      "title": "Ecology and Environmental Science",
+      "description": "Ecosystems, populations, and environmental challenges. This course examines interactions between organisms and their environment, population dynamics, community ecology, and conservation biology.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "in_person",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO032",
+          "course_title": "Prerequisite for Ecology and Environmental Science",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Debra Davidson",
+      "max_enrollment": 69,
+      "current_enrollment": 0,
+      "tags": [
+        "ecology",
+        "environment",
+        "conservation",
+        "sustainability",
+        "ecology",
+        "environment",
+        "conservation",
+        "sustainability"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in ecology and environmental science",
+        "Implement ecology and environmental science algorithms and techniques",
+        "Apply ecology and environmental science to real-world problems",
+        "Analyze and evaluate ecology and environmental science solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304835",
+      "updated_at": "2025-12-05T11:53:05.304835"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X624",
+      "course_code": "BIO036",
+      "title": "Biochemistry",
+      "description": "Chemical processes and molecules of living organisms. This course covers the structure and function of biological macromolecules, enzyme kinetics, metabolism, and molecular signaling.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "in_person",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO030",
+          "course_title": "Prerequisite for Biochemistry",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Jeffrey Chavez",
+      "max_enrollment": 79,
+      "current_enrollment": 0,
+      "tags": [
+        "biochemistry",
+        "metabolism",
+        "enzymes",
+        "proteins",
+        "biochemistry",
+        "metabolism",
+        "enzymes",
+        "proteins"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in biochemistry",
+        "Implement biochemistry algorithms and techniques",
+        "Apply biochemistry to real-world problems",
+        "Analyze and evaluate biochemistry solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304844",
+      "updated_at": "2025-12-05T11:53:05.304845"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X625",
+      "course_code": "BIO037",
+      "title": "Neuroscience",
+      "description": "Brain structure, neural circuits, and behavior. This course explores the nervous system from molecules to behavior, covering neuroanatomy, synaptic transmission, sensory systems, and cognitive neuroscience.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO033",
+          "course_title": "Prerequisite for Neuroscience",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Sherri Baker",
+      "max_enrollment": 78,
+      "current_enrollment": 0,
+      "tags": [
+        "neuroscience",
+        "brain",
+        "neurons",
+        "cognition",
+        "neuroscience",
+        "brain",
+        "neurons",
+        "cognition"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in neuroscience",
+        "Implement neuroscience algorithms and techniques",
+        "Apply neuroscience to real-world problems",
+        "Analyze and evaluate neuroscience solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304853",
+      "updated_at": "2025-12-05T11:53:05.304854"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X626",
+      "course_code": "BIO038",
+      "title": "Evolutionary Biology",
+      "description": "Mechanisms of evolution and phylogenetics. This course examines natural selection, genetic drift, speciation, and the history of life on Earth. Students will analyze evolutionary patterns using molecular and morphological data.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "online",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO030",
+          "course_title": "Prerequisite for Evolutionary Biology",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Cassandra Gaines",
+      "max_enrollment": 70,
+      "current_enrollment": 0,
+      "tags": [
+        "evolution",
+        "phylogenetics",
+        "natural selection",
+        "speciation",
+        "evolution",
+        "phylogenetics",
+        "natural selection",
+        "speciation"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in evolutionary biology",
+        "Implement evolutionary biology algorithms and techniques",
+        "Apply evolutionary biology to real-world problems",
+        "Analyze and evaluate evolutionary biology solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304862",
+      "updated_at": "2025-12-05T11:53:05.304863"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X627",
+      "course_code": "BIO039",
+      "title": "Cell Biology",
+      "description": "Advanced study of cell structure and function. This course provides an in-depth examination of cellular organelles, cell signaling, cell cycle, and cellular techniques. Laboratory work includes microscopy and cell culture.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "online",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO030",
+          "course_title": "Prerequisite for Cell Biology",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Elizabeth Fowler",
+      "max_enrollment": 75,
+      "current_enrollment": 0,
+      "tags": [
+        "cell biology",
+        "organelles",
+        "cell signaling",
+        "microscopy",
+        "cell biology",
+        "organelles",
+        "cell signaling",
+        "microscopy"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in cell biology",
+        "Implement cell biology algorithms and techniques",
+        "Apply cell biology to real-world problems",
+        "Analyze and evaluate cell biology solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304871",
+      "updated_at": "2025-12-05T11:53:05.304872"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X628",
+      "course_code": "BIO040",
+      "title": "Bioinformatics",
+      "description": "Computational analysis of biological data. This course teaches algorithms and tools for analyzing genomic, proteomic, and other biological datasets. Students will learn sequence alignment, phylogenetic analysis, and structural bioinformatics.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "in_person",
+      "department": "Biology",
+      "major": "Biology",
+      "prerequisites": [
+        {
+          "course_code": "BIO030",
+          "course_title": "Prerequisite for Bioinformatics",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        },
+        {
+          "course_code": "CS001",
+          "course_title": "Prerequisite for Bioinformatics",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Brittany Farmer",
+      "max_enrollment": 60,
+      "current_enrollment": 0,
+      "tags": [
+        "bioinformatics",
+        "genomics",
+        "computational biology",
+        "data analysis",
+        "bioinformatics",
+        "genomics",
+        "computational biology",
+        "data analysis"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in bioinformatics",
+        "Implement bioinformatics algorithms and techniques",
+        "Apply bioinformatics to real-world problems",
+        "Analyze and evaluate bioinformatics solutions",
+        "Design and build complete biology systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304884",
+      "updated_at": "2025-12-05T11:53:05.304885"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X629",
+      "course_code": "ARCH041",
+      "title": "Introduction to Architecture",
+      "description": "Fundamentals of architectural design and history. This course introduces students to architectural principles, design thinking, and the history of built environments. Students will develop basic drawing and modeling skills.",
+      "credits": 3,
+      "difficulty_level": "beginner",
+      "format": "online",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [],
+      "schedule": null,
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Paula Moreno",
+      "max_enrollment": 31,
+      "current_enrollment": 0,
+      "tags": [
+        "architecture",
+        "design",
+        "history",
+        "fundamentals",
+        "architecture",
+        "design",
+        "history",
+        "fundamentals"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in introduction to architecture",
+        "Implement introduction to architecture algorithms and techniques",
+        "Apply introduction to architecture to real-world problems",
+        "Analyze and evaluate introduction to architecture solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304893",
+      "updated_at": "2025-12-05T11:53:05.304894"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62A",
+      "course_code": "ARCH042",
+      "title": "Architectural Drawing and Representation",
+      "description": "Technical drawing, CAD, and visualization techniques. This course teaches orthographic projection, perspective drawing, and computer-aided design using AutoCAD and Revit. Students will create professional architectural drawings.",
+      "credits": 3,
+      "difficulty_level": "beginner",
+      "format": "hybrid",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Fred Smith",
+      "max_enrollment": 35,
+      "current_enrollment": 0,
+      "tags": [
+        "architecture",
+        "cad",
+        "drawing",
+        "visualization",
+        "architecture",
+        "cad",
+        "drawing",
+        "visualization"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in architectural drawing and representation",
+        "Implement architectural drawing and representation algorithms and techniques",
+        "Apply architectural drawing and representation to real-world problems",
+        "Analyze and evaluate architectural drawing and representation solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304903",
+      "updated_at": "2025-12-05T11:53:05.304903"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62B",
+      "course_code": "ARCH043",
+      "title": "Architectural Design Studio I",
+      "description": "Residential design and small-scale projects. This studio course focuses on designing single-family homes and small buildings. Students will develop design concepts, create drawings, and build physical models.",
+      "credits": 4,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [
+        {
+          "course_code": "ARCH041",
+          "course_title": "Prerequisite for Architectural Design Studio I",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Sherry Decker",
+      "max_enrollment": 35,
+      "current_enrollment": 0,
+      "tags": [
+        "architecture",
+        "design studio",
+        "residential",
+        "design",
+        "architecture",
+        "design studio",
+        "residential",
+        "design"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in architectural design studio i",
+        "Implement architectural design studio i algorithms and techniques",
+        "Apply architectural design studio i to real-world problems",
+        "Analyze and evaluate architectural design studio i solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304913",
+      "updated_at": "2025-12-05T11:53:05.304914"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62C",
+      "course_code": "ARCH044",
+      "title": "Structures and Building Systems",
+      "description": "Structural principles and mechanical systems. This course covers structural analysis, load paths, and building systems including HVAC, plumbing, and electrical. Students will design structural systems for buildings.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "in_person",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [
+        {
+          "course_code": "ARCH041",
+          "course_title": "Prerequisite for Structures and Building Systems",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Anthony Humphrey",
+      "max_enrollment": 45,
+      "current_enrollment": 0,
+      "tags": [
+        "architecture",
+        "structures",
+        "building systems",
+        "engineering",
+        "architecture",
+        "structures",
+        "building systems",
+        "engineering"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in structures and building systems",
+        "Implement structures and building systems algorithms and techniques",
+        "Apply structures and building systems to real-world problems",
+        "Analyze and evaluate structures and building systems solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304925",
+      "updated_at": "2025-12-05T11:53:05.304926"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62D",
+      "course_code": "ARCH045",
+      "title": "Urban Design and Planning",
+      "description": "City planning, public spaces, and urban development. This course examines urban form, zoning, transportation, and community design. Students will develop plans for urban neighborhoods and public spaces.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "hybrid",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [
+        {
+          "course_code": "ARCH041",
+          "course_title": "Prerequisite for Urban Design and Planning",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "fall",
+      "year": 2025,
+      "instructor": "Angelica Tucker",
+      "max_enrollment": 79,
+      "current_enrollment": 0,
+      "tags": [
+        "urban design",
+        "planning",
+        "public space",
+        "cities",
+        "urban design",
+        "planning",
+        "public space",
+        "cities"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in urban design and planning",
+        "Implement urban design and planning algorithms and techniques",
+        "Apply urban design and planning to real-world problems",
+        "Analyze and evaluate urban design and planning solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304936",
+      "updated_at": "2025-12-05T11:53:05.304937"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62E",
+      "course_code": "ARCH046",
+      "title": "Sustainable Building Design",
+      "description": "Green architecture, energy efficiency, and LEED certification. This course teaches sustainable design principles for buildings that minimize environmental impact. Students will learn about passive solar design, green materials, water conservation, and renewable energy integration. Projects focus on designing net-zero energy buildings.",
+      "credits": 4,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [
+        {
+          "course_code": "ARCH043",
+          "course_title": "Prerequisite for Sustainable Building Design",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Philip Cannon",
+      "max_enrollment": 36,
+      "current_enrollment": 0,
+      "tags": [
+        "architecture",
+        "sustainability",
+        "green building",
+        "leed",
+        "architecture",
+        "sustainability",
+        "green building",
+        "leed"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in sustainable building design",
+        "Implement sustainable building design algorithms and techniques",
+        "Apply sustainable building design to real-world problems",
+        "Analyze and evaluate sustainable building design solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304947",
+      "updated_at": "2025-12-05T11:53:05.304948"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62F",
+      "course_code": "ARCH047",
+      "title": "Historic Preservation",
+      "description": "Conservation of historic buildings and cultural heritage. This course covers documentation, assessment, and restoration of historic structures. Students will learn preservation standards and develop conservation plans.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [
+        {
+          "course_code": "ARCH041",
+          "course_title": "Prerequisite for Historic Preservation",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "John Pierce",
+      "max_enrollment": 30,
+      "current_enrollment": 0,
+      "tags": [
+        "architecture",
+        "preservation",
+        "historic",
+        "conservation",
+        "architecture",
+        "preservation",
+        "historic",
+        "conservation"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in historic preservation",
+        "Implement historic preservation algorithms and techniques",
+        "Apply historic preservation to real-world problems",
+        "Analyze and evaluate historic preservation solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304958",
+      "updated_at": "2025-12-05T11:53:05.304960"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62G",
+      "course_code": "ARCH048",
+      "title": "Landscape Architecture",
+      "description": "Design of outdoor spaces, parks, and landscapes. This course covers site planning, planting design, grading, and landscape construction. Students will design parks, gardens, and public landscapes.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [
+        {
+          "course_code": "ARCH041",
+          "course_title": "Prerequisite for Landscape Architecture",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "winter",
+      "year": 2025,
+      "instructor": "Shane Henderson",
+      "max_enrollment": 59,
+      "current_enrollment": 0,
+      "tags": [
+        "landscape architecture",
+        "site design",
+        "parks",
+        "outdoor spaces",
+        "landscape architecture",
+        "site design",
+        "parks",
+        "outdoor spaces"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in landscape architecture",
+        "Implement landscape architecture algorithms and techniques",
+        "Apply landscape architecture to real-world problems",
+        "Analyze and evaluate landscape architecture solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304970",
+      "updated_at": "2025-12-05T11:53:05.304971"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62H",
+      "course_code": "ARCH049",
+      "title": "Interior Architecture",
+      "description": "Interior space planning and design. This course focuses on the design of interior environments including residential, commercial, and institutional spaces. Topics include space planning, materials, lighting, and furniture.",
+      "credits": 3,
+      "difficulty_level": "intermediate",
+      "format": "online",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [
+        {
+          "course_code": "ARCH041",
+          "course_title": "Prerequisite for Interior Architecture",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": null,
+      "semester": "summer",
+      "year": 2025,
+      "instructor": "Joshua Blair",
+      "max_enrollment": 31,
+      "current_enrollment": 0,
+      "tags": [
+        "interior design",
+        "space planning",
+        "materials",
+        "lighting",
+        "interior design",
+        "space planning",
+        "materials",
+        "lighting"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in interior architecture",
+        "Implement interior architecture algorithms and techniques",
+        "Apply interior architecture to real-world problems",
+        "Analyze and evaluate interior architecture solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304982",
+      "updated_at": "2025-12-05T11:53:05.304983"
+    },
+    {
+      "id": "01KBQPWXMRR6V69NDSH8K5X62J",
+      "course_code": "ARCH050",
+      "title": "Digital Fabrication",
+      "description": "3D printing, CNC, and computational design. This course explores digital fabrication technologies and parametric design. Students will use Grasshopper, laser cutters, and 3D printers to create architectural prototypes.",
+      "credits": 3,
+      "difficulty_level": "advanced",
+      "format": "hybrid",
+      "department": "Architecture",
+      "major": "Architecture",
+      "prerequisites": [
+        {
+          "course_code": "ARCH042",
+          "course_title": "Prerequisite for Digital Fabrication",
+          "minimum_grade": "C",
+          "can_be_concurrent": false
+        }
+      ],
+      "schedule": {
+        "days": [
+          "tuesday",
+          "thursday"
+        ],
+        "start_time": "10:00",
+        "end_time": "11:30",
+        "location": "Room 101"
+      },
+      "semester": "spring",
+      "year": 2025,
+      "instructor": "Eric Carney",
+      "max_enrollment": 35,
+      "current_enrollment": 0,
+      "tags": [
+        "digital fabrication",
+        "3d printing",
+        "parametric design",
+        "technology",
+        "digital fabrication",
+        "3d printing",
+        "parametric design",
+        "technology"
+      ],
+      "learning_objectives": [
+        "Understand core concepts in digital fabrication",
+        "Implement digital fabrication algorithms and techniques",
+        "Apply digital fabrication to real-world problems",
+        "Analyze and evaluate digital fabrication solutions",
+        "Design and build complete architecture systems"
+      ],
+      "created_at": "2025-12-05T11:53:05.304993",
+      "updated_at": "2025-12-05T11:53:05.304993"
+    }
+  ]
+}

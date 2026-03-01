@@ -1,0 +1,8 @@
+node_modules/
+redisdata/
+.DS_Store
+.vscode/
+*.bak
+*.swp
+*.tmp
+*.log

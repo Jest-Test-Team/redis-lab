@@ -1,0 +1,32 @@
+[project]
+name = "context-eng"
+version = "1.0.0"
+description = "Context Engineering Course - A comprehensive, hands-on course teaching practical context engineering patterns for AI agents using Redis, Agent Memory Server, LangChain, and LangGraph"
+license = {text = "MIT"}
+keywords = [
+    "redis",
+    "ai",
+    "context-engineering",
+    "langgraph",
+    "langchain",
+    "openai",
+    "vector-database",
+    "semantic-search",
+    "memory-management",
+    "rag",
+    "agents",
+]
+
+[project.scripts]
+generate-courses = "redis_context_course.scripts.generate_courses:main"
+generate-hierarchical-courses = "redis_context_course.scripts.generate_hierarchical_courses:main"
+ingest-courses = "redis_context_course.scripts.ingest_courses:main"
+load-hierarchical-courses = "redis_context_course.scripts.load_hierarchical_courses:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/redis_context_course"]
+

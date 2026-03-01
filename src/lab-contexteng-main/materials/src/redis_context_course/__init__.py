@@ -1,0 +1,125 @@
+"""
+Redis Context Course - Context Engineering Reference Implementation
+
+This package provides a complete reference implementation of a context-aware
+AI agent for university course recommendations and academic planning.
+
+The agent demonstrates key context engineering concepts:
+- System context management
+- Working memory and long-term memory (via Redis Agent Memory Server)
+- Tool integration and usage
+- Semantic search and retrieval
+- Personalized recommendations
+
+Main Components:
+- models: Data models for courses and students
+- memory_client: Interface to Redis Agent Memory Server
+- course_manager: Course storage and recommendation engine
+- redis_config: Redis configuration and connections
+- tools: Tool definitions for building agents
+
+Installation:
+    pip install redis-context-course agent-memory-server
+
+Usage:
+    from redis_context_course import CourseManager, MemoryClient, create_agent_tools
+
+    # Initialize components
+    course_manager = CourseManager()
+    memory_client = MemoryClient(config=MemoryClientConfig(...))
+
+    # Create tools for your agent
+    tools = create_agent_tools(course_manager, memory_client, "student_id")
+
+Command Line Tools:
+    generate-courses --courses-per-major 15
+    ingest-courses --catalog course_catalog.json
+"""
+
+# Import core models (these have minimal dependencies)
+# Import memory client directly from agent_memory_client
+from agent_memory_client import MemoryAPIClient as MemoryClient
+from agent_memory_client import MemoryClientConfig
+
+# Import course manager
+from .course_manager import CourseManager
+from .models import (
+    AgentResponse,
+    Course,
+    CourseFormat,
+    CourseRecommendation,
+    CourseSchedule,
+    DayOfWeek,
+    DifficultyLevel,
+    Major,
+    Prerequisite,
+    Semester,
+    StudentProfile,
+)
+
+# Import optimization helpers (from Section 4)
+from .optimization_helpers import (
+    classify_intent_with_llm,
+    count_tokens,
+    create_summary_view,
+    create_user_profile_view,
+    estimate_token_budget,
+    extract_references,
+    filter_tools_by_intent,
+    format_context_for_llm,
+    hybrid_retrieval,
+)
+from .redis_config import RedisConfig, redis_config
+
+# Import tools (used in notebooks and for building agents)
+from .tools import (
+    create_agent_tools,
+    create_course_tools,
+    create_memory_tools,
+    select_tools_by_keywords,
+)
+
+__version__ = "1.0.0"
+__author__ = "Redis AI Resources Team"
+__email__ = "redis-ai@redis.com"
+__license__ = "MIT"
+__description__ = (
+    "Context Engineering with Redis - University Class Agent Reference Implementation"
+)
+
+__all__ = [
+    # Core classes
+    "MemoryClient",
+    "MemoryClientConfig",
+    "CourseManager",
+    "RedisConfig",
+    "redis_config",
+    # Data models
+    "Course",
+    "Major",
+    "StudentProfile",
+    "CourseRecommendation",
+    "AgentResponse",
+    "Prerequisite",
+    "CourseSchedule",
+    # Enums
+    "DifficultyLevel",
+    "CourseFormat",
+    "Semester",
+    "DayOfWeek",
+    # Tools (for notebooks and building agents)
+    "create_agent_tools",
+    "create_course_tools",
+    "create_memory_tools",
+    "select_tools_by_keywords",
+    # Optimization helpers (Section 4)
+    "count_tokens",
+    "estimate_token_budget",
+    "hybrid_retrieval",
+    "create_summary_view",
+    "create_user_profile_view",
+    "filter_tools_by_intent",
+    "classify_intent_with_llm",
+    "extract_references",
+    "format_context_for_llm",
+]
