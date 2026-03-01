@@ -1,0 +1,44 @@
+# 蜃景交易所 — 方案 2 極限壓縮：Render Blueprint
+# 部署前請將下方 repo 換成你的 GitHub 專案 URL（例如 https://github.com/your-username/redis-lab-app）
+# 僅 Gateway 對外；Redis 與 Engine 為內網服務。Identity 不部署，由 Gateway 內建 fallback。
+
+version: "1"
+services:
+  # 1. 核心記憶體：Redis（Private Service，免費重啟會遺失資料，符合「瞬時消失」設定）
+  - type: pserv
+    name: mirage-redis
+    runtime: docker
+    dockerfilePath: ./packages/redis/Dockerfile
+    plan: free
+    repo: https://github.com/your-username/redis-lab-app
+
+  # 2. 地獄火撮合引擎：Rust（內網，不對外）
+  - type: pserv
+    name: mirage-engine
+    plan: free
+    repo: https://github.com/your-username/redis-lab-app
+    buildCommand: cargo build --release --manifest-path apps/engine/Cargo.toml
+    startCommand: ./target/release/mirage-engine
+    envVars:
+      - key: REDIS_ADDR
+        value: redis://mirage-redis:6379/
+      - key: PORT
+        value: "8081"
+
+  # 3. 邊界閘道器：Go（唯一對外 Web Service）
+  - type: web
+    name: mirage-gateway
+    plan: free
+    repo: https://github.com/your-username/redis-lab-app
+    buildCommand: cd apps/gateway && go build -o bin/gateway .
+    startCommand: ./apps/gateway/bin/gateway
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: REDIS_ADDR
+        value: mirage-redis:6379
+      - key: ENGINE_URL
+        value: http://mirage-engine:8081
+      # 不設 IDENTITY_URL，使用 Gateway 內建虛擬 ID fallback
+      - key: GIN_MODE
+        value: release
