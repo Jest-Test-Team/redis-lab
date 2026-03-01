@@ -17,7 +17,7 @@ services:
     name: mirage-engine
     runtime: rust
     plan: free
-    repo: https://github.com/your-username/redis-lab-app
+    repo: https://github.com/dennislee928/redis-lab-app
     buildCommand: cargo build --release --manifest-path apps/engine/Cargo.toml
     startCommand: ./target/release/mirage-engine
     envVars:
