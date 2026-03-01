@@ -33,3 +33,16 @@ body {
 .glow-cyan {
   text-shadow: 0 0 6px rgba(0, 212, 255, 0.4);
 }
+
+/* Identity Glitch: 身份閃爍 */
+@keyframes glitch-shift {
+  0% { transform: translate(0); filter: none; }
+  15% { transform: translate(-2px, 1px); text-shadow: 2px 0 #ff3366, -2px 0 #00d4ff; }
+  30% { transform: translate(2px, -1px); text-shadow: -2px 0 #00d4ff, 2px 0 #ff3366; }
+  45% { transform: translate(-1px, 2px); text-shadow: 1px 0 #00ff88; }
+  60% { transform: translate(1px, -2px); text-shadow: -1px 0 #ff3366; }
+  100% { transform: translate(0); text-shadow: none; }
+}
+.glitch-active {
+  animation: glitch-shift 0.4s ease-in-out;
+}

@@ -14,6 +14,7 @@ export function useWs(url: string) {
   const [connected, setConnected] = useState(false);
   const [virtualId, setVirtualId] = useState<string | null>(null);
   const [lastEvent, setLastEvent] = useState<WsMessage | null>(null);
+  const [identityRefreshCount, setIdentityRefreshCount] = useState(0);
   const [logs, setLogs] = useState<string[]>([]);
   const wsRef = useRef<WebSocket | null>(null);
   const reconnectRef = useRef<ReturnType<typeof setTimeout>>();
@@ -48,6 +49,7 @@ export function useWs(url: string) {
           setLastEvent(data);
           if (data.type === "identity_refreshed" && data.payload && typeof data.payload === "object" && "virtualId" in data.payload) {
             setVirtualId((data.payload as { virtualId: string }).virtualId);
+            setIdentityRefreshCount((c) => c + 1);
           }
           addLog(`${t("logEvent")}: ${data.type}`);
         } catch {
@@ -64,5 +66,5 @@ export function useWs(url: string) {
     };
   }, [url, t]);
 
-  return { connected, virtualId, lastEvent, logs };
+  return { connected, virtualId, lastEvent, identityRefreshCount, logs };
 }

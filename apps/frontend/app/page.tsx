@@ -7,11 +7,12 @@ import { useTranslations } from "@/contexts/LocaleContext";
 import { Card } from "@/components/ui/Card";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { IdentityGlitch } from "@/components/IdentityGlitch";
 
 export default function Home() {
   const t = useTranslations();
   const wsUrl = getGatewayWsUrl();
-  const { connected, virtualId, lastEvent, logs } = useWs(wsUrl);
+  const { connected, virtualId, lastEvent, identityRefreshCount, logs } = useWs(wsUrl);
 
   return (
     <main className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-10">
@@ -44,11 +45,7 @@ export default function Home() {
             <p className="font-mono text-[10px] sm:text-xs font-light text-white/80">
               {t("gatewayWs")}: <StatusBadge connected={connected} label={connected ? t("connected") : t("disconnected")} />
             </p>
-            {virtualId && (
-              <p className="font-mono text-[10px] text-white/80 mt-2">
-                {t("virtualId")}: <span className="glow-cyan text-terminal-cyan">{virtualId}</span>
-              </p>
-            )}
+            <IdentityGlitch virtualId={virtualId} triggerRefresh={identityRefreshCount} label={t("virtualId")} />
             {lastEvent && (
               <p className="font-mono text-[10px] text-nothing-muted mt-1 truncate">
                 {t("lastEvent")}: {lastEvent.type}

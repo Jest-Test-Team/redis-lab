@@ -7,6 +7,7 @@ use axum::{
 };
 use serde::{Deserialize, Serialize};
 use std::env;
+use std::collections::HashMap;
 use tower_http::cors::CorsLayer;
 
 const REDIS_ADDR_DEFAULT: &str = "redis://127.0.0.1:6379/";
