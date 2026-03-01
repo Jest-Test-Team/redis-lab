@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D60A9B092992693300749EB6 /* 5by7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60A9B082992693300749EB6 /* 5by7.ttf */; };
+		D60A9B0A2992693300749EB6 /* 5by7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60A9B082992693300749EB6 /* 5by7.ttf */; };
+		D60A9B0B2992693300749EB6 /* 5by7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60A9B082992693300749EB6 /* 5by7.ttf */; };
+		D60C145E29697E7B003E10D4 /* Nothing_X_MacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C145D29697E7B003E10D4 /* Nothing_X_MacOSApp.swift */; };
+		D60C146229697E7C003E10D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60C146129697E7C003E10D4 /* Assets.xcassets */; };
+		D60C146529697E7C003E10D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60C146429697E7C003E10D4 /* Preview Assets.xcassets */; };
+		D60C147029697E7C003E10D4 /* Nothing_X_MacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C146F29697E7C003E10D4 /* Nothing_X_MacOSTests.swift */; };
+		D60C147A29697E7D003E10D4 /* Nothing_X_MacOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C147929697E7D003E10D4 /* Nothing_X_MacOSUITests.swift */; };
+		D60C147C29697E7D003E10D4 /* Nothing_X_MacOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C147B29697E7D003E10D4 /* Nothing_X_MacOSUITestsLaunchTests.swift */; };
+		D60C148A2969A98C003E10D4 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C14892969A98C003E10D4 /* BluetoothManager.swift */; };
+		D62BA6B5299A7EA3007D52C2 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BA6B4299A7EA2007D52C2 /* ButtonStyles.swift */; };
+		D65CE68329AA954700B5B84E /* nothing-ear-1.svg in Resources */ = {isa = PBXBuildFile; fileRef = D65CE68229AA954700B5B84E /* nothing-ear-1.svg */; };
+		D6A7B0602A664C66001DDEAF /* CRC16.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A7B05F2A664C66001DDEAF /* CRC16.swift */; };
+		D6AEF335299BD56200FB5DBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF334299BD56200FB5DBC /* HomeView.swift */; };
+		D6AEF337299BD58600FB5DBC /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF336299BD58600FB5DBC /* ConnectView.swift */; };
+		D6AEF339299BD5C900FB5DBC /* EqualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF338299BD5C900FB5DBC /* EqualizerView.swift */; };
+		D6AEF33B299BD5DE00FB5DBC /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF33A299BD5DE00FB5DBC /* ControlsView.swift */; };
+		D6AEF340299BE69800FB5DBC /* ear_1_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF33C299BE69700FB5DBC /* ear_1_2x.png */; };
+		D6AEF341299BE69800FB5DBC /* ear_1_4x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF33D299BE69700FB5DBC /* ear_1_4x.png */; };
+		D6AEF342299BE69800FB5DBC /* ear_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF33E299BE69700FB5DBC /* ear_1.png */; };
+		D6AEF343299BE69800FB5DBC /* ear_1_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF33F299BE69700FB5DBC /* ear_1_3x.png */; };
+		D6AEF347299C16DC00FB5DBC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF346299C16DC00FB5DBC /* SettingsView.swift */; };
+		D6AEF349299C16EB00FB5DBC /* FindMyBudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF348299C16EB00FB5DBC /* FindMyBudsView.swift */; };
+		D6AEF34B299C7ED400FB5DBC /* BatteryIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF34A299C7ED400FB5DBC /* BatteryIndicatorView.swift */; };
+		D6AEF34F299C7FA500FB5DBC /* NoiseControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF34E299C7FA500FB5DBC /* NoiseControlView.swift */; };
+		D6AEF352299C807F00FB5DBC /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF351299C807F00FB5DBC /* SettingsButtonView.swift */; };
+		D6AEF354299C808B00FB5DBC /* QuitButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF353299C808B00FB5DBC /* QuitButtonView.swift */; };
+		D6AEF356299C80EF00FB5DBC /* DeviceNameDotTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF355299C80EF00FB5DBC /* DeviceNameDotTextView.swift */; };
+		D6AEF358299C846700FB5DBC /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF357299C846700FB5DBC /* BackButtonView.swift */; };
+		D6AEF35A299C98A400FB5DBC /* SwitchToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF359299C98A400FB5DBC /* SwitchToggleStyle.swift */; };
+		D6BF8934299CDE430068BBE6 /* ProgressViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF8933299CDE430068BBE6 /* ProgressViewStyles.swift */; };
+		D6EAE47B29A4D4BE00C9675D /* BudsSidePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAE47A29A4D4BE00C9675D /* BudsSidePickerView.swift */; };
+		D6EAE47D29A4DC6F00C9675D /* MenuStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAE47C29A4DC6F00C9675D /* MenuStyles.swift */; };
+		D6EAE47F29A4E84200C9675D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAE47E29A4E84200C9675D /* Store.swift */; };
+		D6EAE48529A5F91A00C9675D /* ControlMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAE48429A5F91A00C9675D /* ControlMenuView.swift */; };
+		D6EAE48729A69E5E00C9675D /* ControlsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAE48629A69E5E00C9675D /* ControlsDetailView.swift */; };
+		D6EB900D29A4868200D4C542 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EB900C29A4868200D4C542 /* Destination.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D60C146C29697E7C003E10D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D60C145229697E7B003E10D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D60C145929697E7B003E10D4;
+			remoteInfo = "Nothing X MacOS";
+		};
+		D60C147629697E7D003E10D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D60C145229697E7B003E10D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D60C145929697E7B003E10D4;
+			remoteInfo = "Nothing X MacOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D60A9B082992693300749EB6 /* 5by7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5by7.ttf; sourceTree = "<group>"; };
+		D60C145A29697E7B003E10D4 /* Nothing X MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nothing X MacOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60C145D29697E7B003E10D4 /* Nothing_X_MacOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nothing_X_MacOSApp.swift; sourceTree = "<group>"; };
+		D60C146129697E7C003E10D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D60C146429697E7C003E10D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D60C146629697E7C003E10D4 /* Nothing_X_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nothing_X_MacOS.entitlements; sourceTree = "<group>"; };
+		D60C146B29697E7C003E10D4 /* Nothing X MacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nothing X MacOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60C146F29697E7C003E10D4 /* Nothing_X_MacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nothing_X_MacOSTests.swift; sourceTree = "<group>"; };
+		D60C147529697E7D003E10D4 /* Nothing X MacOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nothing X MacOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60C147929697E7D003E10D4 /* Nothing_X_MacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nothing_X_MacOSUITests.swift; sourceTree = "<group>"; };
+		D60C147B29697E7D003E10D4 /* Nothing_X_MacOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nothing_X_MacOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D60C148829699B4D003E10D4 /* Nothing-X-MacOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Nothing-X-MacOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D60C14892969A98C003E10D4 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		D62BA6B4299A7EA2007D52C2 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		D65CE68229AA954700B5B84E /* nothing-ear-1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nothing-ear-1.svg"; sourceTree = "<group>"; };
+		D6A7B05F2A664C66001DDEAF /* CRC16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRC16.swift; sourceTree = "<group>"; };
+		D6AEF334299BD56200FB5DBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D6AEF336299BD58600FB5DBC /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		D6AEF338299BD5C900FB5DBC /* EqualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerView.swift; sourceTree = "<group>"; };
+		D6AEF33A299BD5DE00FB5DBC /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		D6AEF33C299BE69700FB5DBC /* ear_1_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ear_1_2x.png; sourceTree = "<group>"; };
+		D6AEF33D299BE69700FB5DBC /* ear_1_4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ear_1_4x.png; sourceTree = "<group>"; };
+		D6AEF33E299BE69700FB5DBC /* ear_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ear_1.png; sourceTree = "<group>"; };
+		D6AEF33F299BE69700FB5DBC /* ear_1_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ear_1_3x.png; sourceTree = "<group>"; };
+		D6AEF346299C16DC00FB5DBC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D6AEF348299C16EB00FB5DBC /* FindMyBudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyBudsView.swift; sourceTree = "<group>"; };
+		D6AEF34A299C7ED400FB5DBC /* BatteryIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryIndicatorView.swift; sourceTree = "<group>"; };
+		D6AEF34E299C7FA500FB5DBC /* NoiseControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseControlView.swift; sourceTree = "<group>"; };
+		D6AEF351299C807F00FB5DBC /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
+		D6AEF353299C808B00FB5DBC /* QuitButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitButtonView.swift; sourceTree = "<group>"; };
+		D6AEF355299C80EF00FB5DBC /* DeviceNameDotTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNameDotTextView.swift; sourceTree = "<group>"; };
+		D6AEF357299C846700FB5DBC /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		D6AEF359299C98A400FB5DBC /* SwitchToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchToggleStyle.swift; sourceTree = "<group>"; };
+		D6BF8933299CDE430068BBE6 /* ProgressViewStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewStyles.swift; sourceTree = "<group>"; };
+		D6EAE47A29A4D4BE00C9675D /* BudsSidePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudsSidePickerView.swift; sourceTree = "<group>"; };
+		D6EAE47C29A4DC6F00C9675D /* MenuStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStyles.swift; sourceTree = "<group>"; };
+		D6EAE47E29A4E84200C9675D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D6EAE48429A5F91A00C9675D /* ControlMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMenuView.swift; sourceTree = "<group>"; };
+		D6EAE48629A69E5E00C9675D /* ControlsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsDetailView.swift; sourceTree = "<group>"; };
+		D6EB900C29A4868200D4C542 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D60C145729697E7B003E10D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60C146829697E7C003E10D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60C147229697E7D003E10D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D60A9B02299265D000749EB6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6968CEC299419780010C54D /* Images */,
+				D60A9B07299268ED00749EB6 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D60A9B03299265E400749EB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEF34D299C7F7D00FB5DBC /* Components */,
+				D6AEF336299BD58600FB5DBC /* ConnectView.swift */,
+				D6AEF334299BD56200FB5DBC /* HomeView.swift */,
+				D6AEF338299BD5C900FB5DBC /* EqualizerView.swift */,
+				D6AEF33A299BD5DE00FB5DBC /* ControlsView.swift */,
+				D6EAE48629A69E5E00C9675D /* ControlsDetailView.swift */,
+				D6AEF346299C16DC00FB5DBC /* SettingsView.swift */,
+				D6AEF348299C16EB00FB5DBC /* FindMyBudsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D60A9B04299265F600749EB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6EAE47E29A4E84200C9675D /* Store.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D60A9B07299268ED00749EB6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D60A9B082992693300749EB6 /* 5by7.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D60C145129697E7B003E10D4 = {
+			isa = PBXGroup;
+			children = (
+				D60C145C29697E7B003E10D4 /* Nothing X MacOS */,
+				D60C146E29697E7C003E10D4 /* Nothing X MacOSTests */,
+				D60C147829697E7D003E10D4 /* Nothing X MacOSUITests */,
+				D60C145B29697E7B003E10D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D60C145B29697E7B003E10D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D60C145A29697E7B003E10D4 /* Nothing X MacOS.app */,
+				D60C146B29697E7C003E10D4 /* Nothing X MacOSTests.xctest */,
+				D60C147529697E7D003E10D4 /* Nothing X MacOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D60C145C29697E7B003E10D4 /* Nothing X MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				D60C145D29697E7B003E10D4 /* Nothing_X_MacOSApp.swift */,
+				D6AEF32D299BD06F00FB5DBC /* Utilities */,
+				D6AEF34C299C7F5900FB5DBC /* Styles */,
+				D60A9B04299265F600749EB6 /* Models */,
+				D60A9B03299265E400749EB6 /* Views */,
+				D60A9B02299265D000749EB6 /* Resources */,
+				D60C148829699B4D003E10D4 /* Nothing-X-MacOS-Info.plist */,
+				D60C146129697E7C003E10D4 /* Assets.xcassets */,
+				D60C146629697E7C003E10D4 /* Nothing_X_MacOS.entitlements */,
+				D60C146329697E7C003E10D4 /* Preview Content */,
+			);
+			path = "Nothing X MacOS";
+			sourceTree = "<group>";
+		};
+		D60C146329697E7C003E10D4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D60C146429697E7C003E10D4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D60C146E29697E7C003E10D4 /* Nothing X MacOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D60C146F29697E7C003E10D4 /* Nothing_X_MacOSTests.swift */,
+			);
+			path = "Nothing X MacOSTests";
+			sourceTree = "<group>";
+		};
+		D60C147829697E7D003E10D4 /* Nothing X MacOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D60C147929697E7D003E10D4 /* Nothing_X_MacOSUITests.swift */,
+				D60C147B29697E7D003E10D4 /* Nothing_X_MacOSUITestsLaunchTests.swift */,
+			);
+			path = "Nothing X MacOSUITests";
+			sourceTree = "<group>";
+		};
+		D6968CEC299419780010C54D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEF33C299BE69700FB5DBC /* ear_1_2x.png */,
+				D6AEF33F299BE69700FB5DBC /* ear_1_3x.png */,
+				D6AEF33D299BE69700FB5DBC /* ear_1_4x.png */,
+				D6AEF33E299BE69700FB5DBC /* ear_1.png */,
+				D65CE68229AA954700B5B84E /* nothing-ear-1.svg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		D6AEF32D299BD06F00FB5DBC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D60C14892969A98C003E10D4 /* BluetoothManager.swift */,
+				D6EB900C29A4868200D4C542 /* Destination.swift */,
+				D6A7B05F2A664C66001DDEAF /* CRC16.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D6AEF34C299C7F5900FB5DBC /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				D62BA6B4299A7EA2007D52C2 /* ButtonStyles.swift */,
+				D6BF8933299CDE430068BBE6 /* ProgressViewStyles.swift */,
+				D6AEF359299C98A400FB5DBC /* SwitchToggleStyle.swift */,
+				D6EAE47C29A4DC6F00C9675D /* MenuStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		D6AEF34D299C7F7D00FB5DBC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEF34A299C7ED400FB5DBC /* BatteryIndicatorView.swift */,
+				D6AEF351299C807F00FB5DBC /* SettingsButtonView.swift */,
+				D6AEF353299C808B00FB5DBC /* QuitButtonView.swift */,
+				D6AEF357299C846700FB5DBC /* BackButtonView.swift */,
+				D6AEF355299C80EF00FB5DBC /* DeviceNameDotTextView.swift */,
+				D6AEF34E299C7FA500FB5DBC /* NoiseControlView.swift */,
+				D6EAE47A29A4D4BE00C9675D /* BudsSidePickerView.swift */,
+				D6EAE48429A5F91A00C9675D /* ControlMenuView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D60C145929697E7B003E10D4 /* Nothing X MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60C147F29697E7D003E10D4 /* Build configuration list for PBXNativeTarget "Nothing X MacOS" */;
+			buildPhases = (
+				D60C145629697E7B003E10D4 /* Sources */,
+				D60C145729697E7B003E10D4 /* Frameworks */,
+				D60C145829697E7B003E10D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nothing X MacOS";
+			productName = "Nothing X MacOS";
+			productReference = D60C145A29697E7B003E10D4 /* Nothing X MacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D60C146A29697E7C003E10D4 /* Nothing X MacOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60C148229697E7D003E10D4 /* Build configuration list for PBXNativeTarget "Nothing X MacOSTests" */;
+			buildPhases = (
+				D60C146729697E7C003E10D4 /* Sources */,
+				D60C146829697E7C003E10D4 /* Frameworks */,
+				D60C146929697E7C003E10D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D60C146D29697E7C003E10D4 /* PBXTargetDependency */,
+			);
+			name = "Nothing X MacOSTests";
+			productName = "Nothing X MacOSTests";
+			productReference = D60C146B29697E7C003E10D4 /* Nothing X MacOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D60C147429697E7D003E10D4 /* Nothing X MacOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60C148529697E7D003E10D4 /* Build configuration list for PBXNativeTarget "Nothing X MacOSUITests" */;
+			buildPhases = (
+				D60C147129697E7D003E10D4 /* Sources */,
+				D60C147229697E7D003E10D4 /* Frameworks */,
+				D60C147329697E7D003E10D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D60C147729697E7D003E10D4 /* PBXTargetDependency */,
+			);
+			name = "Nothing X MacOSUITests";
+			productName = "Nothing X MacOSUITests";
+			productReference = D60C147529697E7D003E10D4 /* Nothing X MacOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D60C145229697E7B003E10D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D60C145929697E7B003E10D4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D60C146A29697E7C003E10D4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D60C145929697E7B003E10D4;
+					};
+					D60C147429697E7D003E10D4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D60C145929697E7B003E10D4;
+					};
+				};
+			};
+			buildConfigurationList = D60C145529697E7B003E10D4 /* Build configuration list for PBXProject "Nothing X MacOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D60C145129697E7B003E10D4;
+			productRefGroup = D60C145B29697E7B003E10D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D60C145929697E7B003E10D4 /* Nothing X MacOS */,
+				D60C146A29697E7C003E10D4 /* Nothing X MacOSTests */,
+				D60C147429697E7D003E10D4 /* Nothing X MacOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D60C145829697E7B003E10D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6AEF340299BE69800FB5DBC /* ear_1_2x.png in Resources */,
+				D65CE68329AA954700B5B84E /* nothing-ear-1.svg in Resources */,
+				D6AEF341299BE69800FB5DBC /* ear_1_4x.png in Resources */,
+				D6AEF342299BE69800FB5DBC /* ear_1.png in Resources */,
+				D60A9B092992693300749EB6 /* 5by7.ttf in Resources */,
+				D6AEF343299BE69800FB5DBC /* ear_1_3x.png in Resources */,
+				D60C146529697E7C003E10D4 /* Preview Assets.xcassets in Resources */,
+				D60C146229697E7C003E10D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60C146929697E7C003E10D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60A9B0A2992693300749EB6 /* 5by7.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60C147329697E7D003E10D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60A9B0B2992693300749EB6 /* 5by7.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D60C145629697E7B003E10D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EAE47F29A4E84200C9675D /* Store.swift in Sources */,
+				D62BA6B5299A7EA3007D52C2 /* ButtonStyles.swift in Sources */,
+				D6AEF349299C16EB00FB5DBC /* FindMyBudsView.swift in Sources */,
+				D6EB900D29A4868200D4C542 /* Destination.swift in Sources */,
+				D60C148A2969A98C003E10D4 /* BluetoothManager.swift in Sources */,
+				D6AEF339299BD5C900FB5DBC /* EqualizerView.swift in Sources */,
+				D6AEF352299C807F00FB5DBC /* SettingsButtonView.swift in Sources */,
+				D6AEF347299C16DC00FB5DBC /* SettingsView.swift in Sources */,
+				D6AEF33B299BD5DE00FB5DBC /* ControlsView.swift in Sources */,
+				D6EAE47D29A4DC6F00C9675D /* MenuStyles.swift in Sources */,
+				D6AEF358299C846700FB5DBC /* BackButtonView.swift in Sources */,
+				D6AEF356299C80EF00FB5DBC /* DeviceNameDotTextView.swift in Sources */,
+				D6AEF34F299C7FA500FB5DBC /* NoiseControlView.swift in Sources */,
+				D6A7B0602A664C66001DDEAF /* CRC16.swift in Sources */,
+				D6BF8934299CDE430068BBE6 /* ProgressViewStyles.swift in Sources */,
+				D6AEF354299C808B00FB5DBC /* QuitButtonView.swift in Sources */,
+				D6AEF35A299C98A400FB5DBC /* SwitchToggleStyle.swift in Sources */,
+				D6AEF337299BD58600FB5DBC /* ConnectView.swift in Sources */,
+				D6AEF335299BD56200FB5DBC /* HomeView.swift in Sources */,
+				D6EAE48529A5F91A00C9675D /* ControlMenuView.swift in Sources */,
+				D6AEF34B299C7ED400FB5DBC /* BatteryIndicatorView.swift in Sources */,
+				D6EAE48729A69E5E00C9675D /* ControlsDetailView.swift in Sources */,
+				D60C145E29697E7B003E10D4 /* Nothing_X_MacOSApp.swift in Sources */,
+				D6EAE47B29A4D4BE00C9675D /* BudsSidePickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60C146729697E7C003E10D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60C147029697E7C003E10D4 /* Nothing_X_MacOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60C147129697E7D003E10D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60C147A29697E7D003E10D4 /* Nothing_X_MacOSUITests.swift in Sources */,
+				D60C147C29697E7D003E10D4 /* Nothing_X_MacOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D60C146D29697E7C003E10D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D60C145929697E7B003E10D4 /* Nothing X MacOS */;
+			targetProxy = D60C146C29697E7C003E10D4 /* PBXContainerItemProxy */;
+		};
+		D60C147729697E7D003E10D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D60C145929697E7B003E10D4 /* Nothing X MacOS */;
+			targetProxy = D60C147629697E7D003E10D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D60C147D29697E7D003E10D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D60C147E29697E7D003E10D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D60C148029697E7D003E10D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Nothing X MacOS/Nothing_X_MacOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nothing X MacOS/Preview Content\"";
+				DEVELOPMENT_TEAM = ZDQ9CMTR26;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nothing-X-MacOS-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to find and maintain connections to your Nothing X's.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This app uses Bluetooth to find and maintain connections to your Nothing X's.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arunavoray.Nothing-X-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D60C148129697E7D003E10D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Nothing X MacOS/Nothing_X_MacOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nothing X MacOS/Preview Content\"";
+				DEVELOPMENT_TEAM = ZDQ9CMTR26;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nothing-X-MacOS-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to find and maintain connections to your Nothing X's.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This app uses Bluetooth to find and maintain connections to your Nothing X's.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arunavoray.Nothing-X-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D60C148329697E7D003E10D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZDQ9CMTR26;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arunavoray.Nothing-X-MacOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nothing X MacOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nothing X MacOS";
+			};
+			name = Debug;
+		};
+		D60C148429697E7D003E10D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZDQ9CMTR26;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arunavoray.Nothing-X-MacOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nothing X MacOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nothing X MacOS";
+			};
+			name = Release;
+		};
+		D60C148629697E7D003E10D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZDQ9CMTR26;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arunavoray.Nothing-X-MacOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Nothing X MacOS";
+			};
+			name = Debug;
+		};
+		D60C148729697E7D003E10D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZDQ9CMTR26;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arunavoray.Nothing-X-MacOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Nothing X MacOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D60C145529697E7B003E10D4 /* Build configuration list for PBXProject "Nothing X MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60C147D29697E7D003E10D4 /* Debug */,
+				D60C147E29697E7D003E10D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D60C147F29697E7D003E10D4 /* Build configuration list for PBXNativeTarget "Nothing X MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60C148029697E7D003E10D4 /* Debug */,
+				D60C148129697E7D003E10D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D60C148229697E7D003E10D4 /* Build configuration list for PBXNativeTarget "Nothing X MacOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60C148329697E7D003E10D4 /* Debug */,
+				D60C148429697E7D003E10D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D60C148529697E7D003E10D4 /* Build configuration list for PBXNativeTarget "Nothing X MacOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60C148629697E7D003E10D4 /* Debug */,
+				D60C148729697E7D003E10D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D60C145229697E7B003E10D4 /* Project object */;
+}
