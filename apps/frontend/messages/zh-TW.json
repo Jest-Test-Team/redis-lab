@@ -16,5 +16,15 @@
   "logDisconnected": "WebSocket 已斷線",
   "logError": "WebSocket 錯誤",
   "logEvent": "事件",
-  "logParseError": "無法解析訊息"
+  "logParseError": "無法解析訊息",
+  "auctionId": "拍賣 ID",
+  "createAuction": "建立拍賣",
+  "placeBid": "出價",
+  "liveBids": "即時出價",
+  "rank": "名次",
+  "amount": "金額",
+  "settle": "結標",
+  "bidAmount": "出價金額",
+  "intelDestroyed": "情報已銷毀",
+  "countdown": "倒數"
 }

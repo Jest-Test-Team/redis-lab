@@ -1,18 +1,53 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useWs } from "@/hooks/useWs";
+import { useAuction } from "@/hooks/useAuction";
 import { getGatewayWsUrl } from "@/lib/gateway-url";
+import { createAuction, bid, settle } from "@/lib/gateway-api";
 import { useTranslations } from "@/contexts/LocaleContext";
 import { Card } from "@/components/ui/Card";
 import { StatusBadge } from "@/components/ui/StatusBadge";
+import { Button } from "@/components/ui/Button";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { IdentityGlitch } from "@/components/IdentityGlitch";
+import { OrderBookWaterfall } from "@/components/OrderBookWaterfall";
+import { KillSwitchOverlay } from "@/components/KillSwitchOverlay";
 
 export default function Home() {
   const t = useTranslations();
   const wsUrl = getGatewayWsUrl();
-  const { connected, virtualId, lastEvent, identityRefreshCount, logs } = useWs(wsUrl);
+  const { connected, virtualId, lastEvent, identityRefreshCount, messages, logs } = useWs(wsUrl);
+  const [auctionId, setAuctionId] = useState("");
+  const [bidAmount, setBidAmount] = useState("");
+  const [killSwitchVisible, setKillSwitchVisible] = useState(false);
+  const [killSwitchIntel, setKillSwitchIntel] = useState("");
+
+  const { entries, settledEvent } = useAuction(auctionId || null, messages);
+
+  const handleCreate = async () => {
+    const id = auctionId.trim() || `auction-${Date.now()}`;
+    const res = await createAuction(id, 5000);
+    if (res.ok) setAuctionId(id);
+  };
+
+  const handleBid = async () => {
+    if (!auctionId || !virtualId) return;
+    const amt = parseFloat(bidAmount);
+    if (Number.isNaN(amt) || amt <= 0) return;
+    await bid(auctionId, virtualId, amt);
+    setBidAmount("");
+  };
+
+  const handleSettle = async () => {
+    if (!auctionId) return;
+    const res = await settle(auctionId);
+    if (res.ok && res.winner_id === virtualId) {
+      setKillSwitchIntel(res.top_bid != null ? `Winning bid: ${res.top_bid}` : "Intel received.");
+      setKillSwitchVisible(true);
+    }
+  };
 
   return (
     <main className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-10">
@@ -76,6 +111,64 @@ export default function Home() {
           </Card>
         </motion.div>
       </div>
+
+      <motion.section
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="mt-6 md:mt-8"
+      >
+        <Card>
+          <h2 className="font-mono text-[10px] font-normal text-white/80 mb-3 uppercase tracking-wider">
+            {t("liveBids")}
+          </h2>
+          <div className="flex flex-wrap gap-2 items-end mb-3">
+            <label className="font-mono text-[10px] text-nothing-muted">
+              {t("auctionId")}
+              <input
+                type="text"
+                value={auctionId}
+                onChange={(e) => setAuctionId(e.target.value)}
+                placeholder="auction-1"
+                className="ml-2 rounded-lg bg-nothing-bg border border-nothing-border px-2 py-1.5 font-mono text-xs text-white/80 w-36"
+              />
+            </label>
+            <Button variant="pill" onClick={handleCreate}>
+              {t("createAuction")}
+            </Button>
+          </div>
+          {auctionId && (
+            <>
+              <div className="flex flex-wrap gap-2 items-end mb-3">
+                <label className="font-mono text-[10px] text-nothing-muted">
+                  {t("bidAmount")}
+                  <input
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    value={bidAmount}
+                    onChange={(e) => setBidAmount(e.target.value)}
+                    className="ml-2 rounded-lg bg-nothing-bg border border-nothing-border px-2 py-1.5 font-mono text-xs text-white/80 w-24"
+                  />
+                </label>
+                <Button variant="pill" onClick={handleBid} disabled={!virtualId}>
+                  {t("placeBid")}
+                </Button>
+                <Button variant="outline" onClick={handleSettle}>
+                  {t("settle")}
+                </Button>
+              </div>
+              <OrderBookWaterfall entries={entries} maxRows={12} />
+            </>
+          )}
+        </Card>
+      </motion.section>
+
+      <KillSwitchOverlay
+        visible={killSwitchVisible}
+        intelText={killSwitchIntel}
+        onComplete={() => setKillSwitchVisible(false)}
+      />
 
       <motion.footer
         initial={{ opacity: 0 }}

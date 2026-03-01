@@ -16,5 +16,15 @@
   "logDisconnected": "WebSocket disconnected",
   "logError": "WebSocket error",
   "logEvent": "Event",
-  "logParseError": "Failed to parse message"
+  "logParseError": "Failed to parse message",
+  "auctionId": "Auction ID",
+  "createAuction": "Create auction",
+  "placeBid": "Place bid",
+  "liveBids": "Live bids",
+  "rank": "Rank",
+  "amount": "Amount",
+  "settle": "Settle",
+  "bidAmount": "Bid amount",
+  "intelDestroyed": "Intel destroyed",
+  "countdown": "Countdown"
 }
