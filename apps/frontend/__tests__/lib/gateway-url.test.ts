@@ -27,7 +27,8 @@ describe("getGatewayWsUrl", () => {
     (globalThis as any).window = {
       location: { hostname: "vercel.app", protocol: "https:", host: "mirage.vercel.app" },
     };
-    expect(getGatewayWsUrl()).toBe("wss://mirage.vercel.app/ws");
+    const url = getGatewayWsUrl();
+    expect(url).toBe("wss://mirage.vercel.app/ws");
   });
 });
 
@@ -55,6 +56,7 @@ describe("getGatewayApiUrl", () => {
     (globalThis as any).window = {
       location: { hostname: "vercel.app", origin: "https://mirage.vercel.app" },
     };
-    expect(getGatewayApiUrl()).toBe("https://mirage.vercel.app");
+    const url = getGatewayApiUrl();
+    expect(url).toBe("https://mirage.vercel.app");
   });
 });
