@@ -5,7 +5,6 @@ use axum::{
     routing::{get, post},
     Json, Router,
 };
-use redis::Commands;
 use serde::{Deserialize, Serialize};
 use std::env;
 use tower_http::cors::CorsLayer;
