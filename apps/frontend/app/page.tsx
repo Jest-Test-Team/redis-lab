@@ -3,87 +3,90 @@
 import { motion } from "framer-motion";
 import { useWs } from "@/hooks/useWs";
 import { getGatewayWsUrl } from "@/lib/gateway-url";
+import { useTranslations } from "@/contexts/LocaleContext";
+import { Card } from "@/components/ui/Card";
+import { StatusBadge } from "@/components/ui/StatusBadge";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 export default function Home() {
+  const t = useTranslations();
   const wsUrl = getGatewayWsUrl();
   const { connected, virtualId, lastEvent, logs } = useWs(wsUrl);
 
   return (
-    <main className="min-h-screen p-6 md:p-10">
+    <main className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-10">
       <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="border-b border-terminal-green/30 pb-4 mb-8"
+        className="flex flex-wrap items-center justify-between gap-2 border-b border-nothing-border pb-4 mb-6 md:mb-8"
       >
-        <h1 className="text-2xl md:text-3xl font-bold glow-green text-terminal-green">
-          ［蜃景交易所］ MIRAGE EXCHANGE
-        </h1>
-        <p className="text-terminal-cyan/80 text-sm mt-1">
-          極短線拍賣 · 身份洗牌 · 死間開關 — 研究用雛形
-        </p>
+        <div>
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-nothing-text glow-green text-terminal-green">
+            {t("title")}
+          </h1>
+          <p className="text-nothing-muted text-xs sm:text-sm mt-1">
+            {t("subtitle")}
+          </p>
+        </div>
+        <LocaleSwitcher />
       </motion.header>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        <motion.section
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2">
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
-          className="rounded-lg border border-terminal-amber/30 bg-black/40 p-4"
         >
-          <h2 className="text-terminal-amber font-mono text-sm mb-2">
-            &gt; 連線狀態
-          </h2>
-          <p className="font-mono text-sm">
-            閘道 WebSocket:{" "}
-            <span
-              className={
-                connected ? "text-terminal-green" : "text-terminal-red"
-              }
-            >
-              {connected ? "已連線" : "未連線"}
-            </span>
-          </p>
-          {virtualId && (
-            <p className="font-mono text-xs text-terminal-cyan mt-2">
-              虛擬 ID: <span className="glow-cyan">{virtualId}</span>
+          <Card>
+            <h2 className="text-terminal-amber font-mono text-xs sm:text-sm mb-2">
+              &gt; {t("connectionStatus")}
+            </h2>
+            <p className="font-mono text-xs sm:text-sm text-nothing-text">
+              {t("gatewayWs")}: <StatusBadge connected={connected} label={connected ? t("connected") : t("disconnected")} />
             </p>
-          )}
-          {lastEvent && (
-            <p className="font-mono text-xs text-terminal-amber/80 mt-1 truncate">
-              最後事件: {lastEvent.type}
-            </p>
-          )}
-        </motion.section>
+            {virtualId && (
+              <p className="font-mono text-xs text-terminal-cyan mt-2">
+                {t("virtualId")}: <span className="glow-cyan">{virtualId}</span>
+              </p>
+            )}
+            {lastEvent && (
+              <p className="font-mono text-xs text-nothing-muted mt-1 truncate">
+                {t("lastEvent")}: {lastEvent.type}
+              </p>
+            )}
+          </Card>
+        </motion.div>
 
-        <motion.section
+        <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.15 }}
-          className="rounded-lg border border-terminal-cyan/30 bg-black/40 p-4"
         >
-          <h2 className="text-terminal-cyan font-mono text-sm mb-2">
-            &gt; 即時日誌
-          </h2>
-          <div className="font-mono text-xs max-h-40 overflow-y-auto space-y-1 text-neutral-400">
-            {logs.length === 0 && (
-              <span className="text-neutral-600">等待事件…</span>
-            )}
-            {logs.slice(-8).map((line, i) => (
-              <div key={i} className="truncate">
-                {line}
-              </div>
-            ))}
-          </div>
-        </motion.section>
+          <Card>
+            <h2 className="text-terminal-cyan font-mono text-xs sm:text-sm mb-2">
+              &gt; {t("liveLog")}
+            </h2>
+            <div className="font-mono text-xs max-h-36 sm:max-h-40 overflow-y-auto space-y-1 text-nothing-muted">
+              {logs.length === 0 && (
+                <span className="text-neutral-600">{t("logWaiting")}</span>
+              )}
+              {logs.slice(-8).map((line, i) => (
+                <div key={i} className="truncate">
+                  {line}
+                </div>
+              ))}
+            </div>
+          </Card>
+        </motion.div>
       </div>
 
       <motion.footer
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="mt-10 text-center text-neutral-500 text-xs"
+        className="mt-8 sm:mt-10 text-center text-nothing-muted text-xs"
       >
-        本專案為高併發與分散式系統研究用，請勿用於非法商業用途。
+        {t("footer")}
       </motion.footer>
     </main>
   );

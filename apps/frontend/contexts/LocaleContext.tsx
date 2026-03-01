@@ -10,12 +10,14 @@ import {
 } from "react";
 import type { Locale } from "@/types/i18n";
 import type { Messages } from "@/types/i18n";
+import en from "@/messages/en.json";
+import zhTW from "@/messages/zh-TW.json";
 
 const STORAGE_KEY = "mirage-locale";
 
 const messagesMap: Record<Locale, Messages> = {
-  "zh-TW": require("@/messages/zh-TW.json"),
-  en: require("@/messages/en.json"),
+  "zh-TW": zhTW as Messages,
+  en: en as Messages,
 };
 
 type LocaleContextValue = {

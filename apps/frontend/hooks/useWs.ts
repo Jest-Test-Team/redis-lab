@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "@/contexts/LocaleContext";
 
 interface WsMessage {
   type: string;
@@ -9,6 +10,7 @@ interface WsMessage {
 }
 
 export function useWs(url: string) {
+  const t = useTranslations();
   const [connected, setConnected] = useState(false);
   const [virtualId, setVirtualId] = useState<string | null>(null);
   const [lastEvent, setLastEvent] = useState<WsMessage | null>(null);
@@ -29,16 +31,16 @@ export function useWs(url: string) {
 
       ws.onopen = () => {
         setConnected(true);
-        addLog("WebSocket 已連線");
+        addLog(t("logConnected"));
       };
 
       ws.onclose = () => {
         setConnected(false);
-        addLog("WebSocket 已斷線");
+        addLog(t("logDisconnected"));
         reconnectRef.current = setTimeout(connect, 3000);
       };
 
-      ws.onerror = () => addLog("WebSocket 錯誤");
+      ws.onerror = () => addLog(t("logError"));
 
       ws.onmessage = (event) => {
         try {
@@ -47,9 +49,9 @@ export function useWs(url: string) {
           if (data.type === "identity_refreshed" && data.payload && typeof data.payload === "object" && "virtualId" in data.payload) {
             setVirtualId((data.payload as { virtualId: string }).virtualId);
           }
-          addLog(`事件: ${data.type}`);
+          addLog(`${t("logEvent")}: ${data.type}`);
         } catch {
-          addLog("無法解析訊息");
+          addLog(t("logParseError"));
         }
       };
     };
@@ -60,7 +62,7 @@ export function useWs(url: string) {
       wsRef.current?.close();
       wsRef.current = null;
     };
-  }, [url]);
+  }, [url, t]);
 
   return { connected, virtualId, lastEvent, logs };
 }
