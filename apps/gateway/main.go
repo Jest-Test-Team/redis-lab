@@ -125,6 +125,26 @@ func main() {
 	}()
 
 	r := gin.Default()
+	// CORS：允許前端網域（mirage-exchange.dennisleehappy.org）與本機開發
+	corsOrigins := getEnv("CORS_ORIGINS", "https://mirage-exchange.dennisleehappy.org,http://localhost:3000,http://127.0.0.1:3000")
+	r.Use(func(c *gin.Context) {
+		origin := c.GetHeader("Origin")
+		for _, o := range strings.Split(corsOrigins, ",") {
+			allowed := strings.TrimSpace(o)
+			if allowed != "" && origin == allowed {
+				c.Header("Access-Control-Allow-Origin", origin)
+				break
+			}
+		}
+		c.Header("Access-Control-Allow-Credentials", "true")
+		c.Header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+		c.Header("Access-Control-Allow-Headers", "Content-Type, Authorization")
+		if c.Request.Method == "OPTIONS" {
+			c.AbortWithStatus(http.StatusNoContent)
+			return
+		}
+		c.Next()
+	})
 	r.GET("/ws", func(c *gin.Context) {
 		conn, err := upgrader.Upgrade(c.Writer, c.Request, nil)
 		if err != nil {
