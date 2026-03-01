@@ -7,20 +7,20 @@ export function LocaleSwitcher() {
   const { locale, setLocale, t } = useLocale();
 
   return (
-    <div className="flex items-center gap-1 rounded-xl border border-nothing-border bg-nothing-surface/50 p-0.5">
+    <div className="flex items-center gap-1 rounded-full border border-nothing-border bg-nothing-bg p-0.5">
       <Button
-        variant="ghost"
+        variant="pill"
         active={locale === "zh-TW"}
         onClick={() => setLocale("zh-TW")}
-        className="min-w-[3rem]"
+        className="min-w-[2.5rem]"
       >
         {t("localeZh")}
       </Button>
       <Button
-        variant="ghost"
+        variant="pill"
         active={locale === "en"}
         onClick={() => setLocale("en")}
-        className="min-w-[3rem]"
+        className="min-w-[2.5rem]"
       >
         {t("localeEn")}
       </Button>

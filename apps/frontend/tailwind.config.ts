@@ -15,12 +15,16 @@ const config: Config = {
           amber: "#ffb800",
           red: "#ff3366",
         },
+        // Nothing X (from nothing-x-macos-main): black, dark grey surface, white/80% text
         nothing: {
-          bg: "#0a0a0a",
-          surface: "#141414",
-          border: "#262626",
-          text: "#f5f5f5",
-          muted: "#a3a3a3",
+          bg: "#000000",
+          surface: "#1c1c1f",
+          surfaceHover: "#252528",
+          border: "#2a2a2e",
+          text: "#ffffff",
+          textMuted: "rgba(255,255,255,0.8)",
+          muted: "#a1a1a6",
+          pill: "#c2c2c4",
         },
       },
       minHeight: {

@@ -4,7 +4,7 @@
 
 ```mermaid
 graph TD
-    Client[Next.js Frontend\n(賽博龐克終端)] <-->|WebSocket| Gateway
+    Client[Next.js Frontend\n(Nothing X 風格)] <-->|WebSocket| Gateway
     
     subgraph Backend Microservices
         Gateway[邊界閘道器 - Go\n(The Vanguard)]
@@ -20,11 +20,14 @@ graph TD
     Sentinel -.->|Keyspace Notifications| Redis
     Matcher -.->|Lua Scripts / ZSet| Redis
     Identity -.->|Set / Hash| Redis
-    ```
-    ```plaintext
-    mirage-exchange/
+```
+
+## 目錄結構 (Directory Structure)
+
+```plaintext
+redis-lab-app/
 ├── apps/
-│   ├── frontend/         # Next.js: 賽博龐克 UI, WebSocket 客戶端
+│   ├── frontend/         # Next.js: Nothing X 風格 UI（參考 nothing-x-macos-main）, WebSocket, i18n
 │   ├── gateway/          # Go: 邊界閘道器 (WebSocket Server, 路由分發)
 │   ├── engine/           # Rust: 撮合引擎 (處理 Lua 腳本, ZSet 排行)
 │   ├── identity/         # Rust: 身份洗牌矩陣 (動態 Token 生成)
@@ -33,7 +36,10 @@ graph TD
 │   ├── redis-lua/        # 共用的 Redis Lua 腳本 (原子操作核心)
 │   ├── proto/            # gRPC Protobuf 定義檔 (微服務通訊)
 │   └── types/            # TypeScript 共用型別定義
+├── test/                 # 統一測試：Jest (frontend), Robot (API), go test, cargo test
+├── docs/                 # 部署與說明文件（如 deploy-shadow-tunnel.md）
 ├── docker-compose.yml    # 本地端 Redis 與微服務一鍵啟動配置
+├── render.yaml           # Render 部署設定（極限壓縮方案）
 ├── README.md             # 專案總說明
-└── cursor.plan.md        # AI 輔助開發計畫書
+└── structure.md          # 本文件：專案結構與架構
 ```

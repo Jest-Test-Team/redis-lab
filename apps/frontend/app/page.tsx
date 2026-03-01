@@ -21,10 +21,10 @@ export default function Home() {
         className="flex flex-wrap items-center justify-between gap-2 border-b border-nothing-border pb-4 mb-6 md:mb-8"
       >
         <div>
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-nothing-text glow-green text-terminal-green">
+          <h1 className="text-sm sm:text-base md:text-lg font-semibold text-white tracking-tight">
             {t("title")}
           </h1>
-          <p className="text-nothing-muted text-xs sm:text-sm mt-1">
+          <p className="text-[10px] sm:text-xs font-light text-nothing-muted mt-0.5">
             {t("subtitle")}
           </p>
         </div>
@@ -38,19 +38,19 @@ export default function Home() {
           transition={{ delay: 0.1 }}
         >
           <Card>
-            <h2 className="text-terminal-amber font-mono text-xs sm:text-sm mb-2">
-              &gt; {t("connectionStatus")}
+            <h2 className="font-mono text-[10px] font-normal text-white/80 mb-2 uppercase tracking-wider">
+              {t("connectionStatus")}
             </h2>
-            <p className="font-mono text-xs sm:text-sm text-nothing-text">
+            <p className="font-mono text-[10px] sm:text-xs font-light text-white/80">
               {t("gatewayWs")}: <StatusBadge connected={connected} label={connected ? t("connected") : t("disconnected")} />
             </p>
             {virtualId && (
-              <p className="font-mono text-xs text-terminal-cyan mt-2">
-                {t("virtualId")}: <span className="glow-cyan">{virtualId}</span>
+              <p className="font-mono text-[10px] text-white/80 mt-2">
+                {t("virtualId")}: <span className="glow-cyan text-terminal-cyan">{virtualId}</span>
               </p>
             )}
             {lastEvent && (
-              <p className="font-mono text-xs text-nothing-muted mt-1 truncate">
+              <p className="font-mono text-[10px] text-nothing-muted mt-1 truncate">
                 {t("lastEvent")}: {lastEvent.type}
               </p>
             )}
@@ -63,10 +63,10 @@ export default function Home() {
           transition={{ delay: 0.15 }}
         >
           <Card>
-            <h2 className="text-terminal-cyan font-mono text-xs sm:text-sm mb-2">
-              &gt; {t("liveLog")}
+            <h2 className="font-mono text-[10px] font-normal text-white/80 mb-2 uppercase tracking-wider">
+              {t("liveLog")}
             </h2>
-            <div className="font-mono text-xs max-h-36 sm:max-h-40 overflow-y-auto space-y-1 text-nothing-muted">
+            <div className="font-mono text-[10px] sm:text-xs max-h-36 sm:max-h-40 overflow-y-auto space-y-1 text-nothing-muted">
               {logs.length === 0 && (
                 <span className="text-neutral-600">{t("logWaiting")}</span>
               )}
@@ -84,7 +84,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="mt-8 sm:mt-10 text-center text-nothing-muted text-xs"
+        className="mt-8 sm:mt-10 text-center text-nothing-muted text-[10px] font-light"
       >
         {t("footer")}
       </motion.footer>

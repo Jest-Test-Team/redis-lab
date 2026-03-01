@@ -7,12 +7,12 @@
 }
 
 body {
-  background: #0d0d0f;
-  color: #e0e0e0;
+  background: #000000;
+  color: rgba(255, 255, 255, 0.8);
   font-family: var(--font-jetbrains);
 }
 
-/* 賽博龐克終端掃描線 */
+/* Nothing X: 極簡掃描線（可選，較細） */
 .terminal-scan::after {
   content: "";
   position: fixed;
@@ -21,15 +21,15 @@ body {
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 0, 0, 0.15) 2px,
-    rgba(0, 0, 0, 0.15) 4px
+    rgba(255, 255, 255, 0.02) 2px,
+    rgba(255, 255, 255, 0.02) 4px
   );
   pointer-events: none;
 }
 
 .glow-green {
-  text-shadow: 0 0 8px #00ff88, 0 0 16px #00ff8866;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.4);
 }
 .glow-cyan {
-  text-shadow: 0 0 8px #00d4ff, 0 0 16px #00d4ff66;
+  text-shadow: 0 0 6px rgba(0, 212, 255, 0.4);
 }

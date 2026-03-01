@@ -1,7 +1,6 @@
 這份文件用於定義專案的精神、技術棧與啟動方式。
 
-```markdown
-# 🌆 蜃景交易所 (Mirage Exchange)
+# 蜃景交易所 (Mirage Exchange)
 
 > **⚠️ 警告 (Disclaimer):** 本專案為極端高併發與分散式系統的「壓力測試與架構演練」純研究用專案。探討範圍包含瞬時通訊、反追蹤跳板機制與死間開關 (Dead Man's Switch)。請勿用於任何非法商業用途。
 
@@ -9,7 +8,7 @@
 
 ## 🛠️ 技術棧 (Tech Stack)
 
-* **Frontend (40%):** Next.js, Framer Motion, Tailwind CSS, WebSockets (賽博龐克終端視覺, 即時資料流)
+* **Frontend (40%):** Next.js, Framer Motion, Tailwind CSS, WebSockets, i18n（Nothing X 風格 UI，參考 nothing-x-macos-main；即時資料流）
 * **Backend (60%):**
   * **Go (Golang):** API Gateway, WebSocket 管理, 背景任務監控。
   * **Rust:** 核心撮合引擎, 身份加密與洗牌, 高頻 API 處理。
@@ -52,5 +51,3 @@ docker-compose up -d
 
 - **暗影隧道** 設定步驟：[docs/deploy-shadow-tunnel.md](docs/deploy-shadow-tunnel.md)
 - **極限壓縮**：根目錄 `render.yaml` 部署至 Render；Vercel 前端使用同源 `/ws`、`/api`，由 vercel.json rewrites 轉發至 Render Gateway。Render Free Tier 有 750 小時/月與睡眠限制，僅適合展示用。
-
-```
