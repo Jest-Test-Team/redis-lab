@@ -3,17 +3,20 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "@/contexts/LocaleContext";
 
-interface WsMessage {
+export interface WsMessage {
   type: string;
   payload?: unknown;
   ts?: number;
 }
+
+const MAX_MESSAGES = 100;
 
 export function useWs(url: string) {
   const t = useTranslations();
   const [connected, setConnected] = useState(false);
   const [virtualId, setVirtualId] = useState<string | null>(null);
   const [lastEvent, setLastEvent] = useState<WsMessage | null>(null);
+  const [messages, setMessages] = useState<WsMessage[]>([]);
   const [identityRefreshCount, setIdentityRefreshCount] = useState(0);
   const [logs, setLogs] = useState<string[]>([]);
   const wsRef = useRef<WebSocket | null>(null);
@@ -47,6 +50,7 @@ export function useWs(url: string) {
         try {
           const data: WsMessage = JSON.parse(event.data);
           setLastEvent(data);
+          setMessages((prev) => [...prev.slice(-(MAX_MESSAGES - 1)), data]);
           if (data.type === "identity_refreshed" && data.payload && typeof data.payload === "object" && "virtualId" in data.payload) {
             setVirtualId((data.payload as { virtualId: string }).virtualId);
             setIdentityRefreshCount((c) => c + 1);
@@ -66,5 +70,5 @@ export function useWs(url: string) {
     };
   }, [url, t]);
 
-  return { connected, virtualId, lastEvent, identityRefreshCount, logs };
+  return { connected, virtualId, lastEvent, messages, identityRefreshCount, logs };
 }

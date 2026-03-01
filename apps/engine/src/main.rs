@@ -125,6 +125,30 @@ async fn bid(Json(req): Json<BidReq>) -> Json<BidRes> {
         "ended" => "ended",
         _ => "invalid",
     };
+    if status == "ok" || status == "outbid" {
+        let rank: Option<u32> = redis::cmd("ZREVRANK")
+            .arg(&zkey)
+            .arg(&req.bidder_id)
+            .query(&mut conn)
+            .ok()
+            .and_then(|r: Option<i64>| r.map(|r| (r + 1) as u32));
+        let rank = rank.unwrap_or(0);
+        let payload: HashMap<&str, serde_json::Value> = [
+            ("type", serde_json::json!("bid")),
+            ("auction_id", serde_json::json!(req.auction_id)),
+            ("bidder_id", serde_json::json!(req.bidder_id)),
+            ("amount", serde_json::json!(req.amount)),
+            ("rank", serde_json::json!(rank)),
+        ]
+        .into_iter()
+        .collect();
+        let channel = format!("mirage:auction:{}", req.auction_id);
+        let _: () = redis::cmd("PUBLISH")
+            .arg(&channel)
+            .arg(serde_json::to_string(&payload).unwrap_or_default())
+            .query(&mut conn)
+            .unwrap_or(());
+    }
     Json(BidRes {
         status: status.to_string(),
         error: None,
@@ -148,6 +172,22 @@ async fn settle(Json(req): Json<SettleReq>) -> Json<SettleRes> {
         .unwrap_or_default();
     let winner_id = result.get(0).filter(|s| !s.is_empty()).cloned();
     let top_bid = result.get(1).and_then(|s| s.parse().ok());
+    if winner_id.is_some() {
+        let payload: HashMap<&str, serde_json::Value> = [
+            ("type", serde_json::json!("settled")),
+            ("auction_id", serde_json::json!(req.auction_id)),
+            ("winner_id", serde_json::json!(winner_id.as_ref().unwrap())),
+            ("top_bid", serde_json::json!(top_bid)),
+        ]
+        .into_iter()
+        .collect();
+        let channel = format!("mirage:auction:{}", req.auction_id);
+        let _: () = redis::cmd("PUBLISH")
+            .arg(&channel)
+            .arg(serde_json::to_string(&payload).unwrap_or_default())
+            .query(&mut conn)
+            .unwrap_or(());
+    }
     Json(SettleRes {
         ok: winner_id.is_some(),
         winner_id,

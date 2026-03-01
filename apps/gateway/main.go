@@ -115,9 +115,9 @@ func main() {
 	h := newHub()
 	go h.run(ctx)
 
-	// Redis Pub/Sub：轉發拍賣事件到 WebSocket
+	// Redis Pub/Sub：轉發拍賣事件到 WebSocket（PSUBSCRIBE 以匹配 mirage:auction:{id}）
 	go func() {
-		sub := rdb.Subscribe(ctx, "mirage:auction:*")
+		sub := rdb.PSubscribe(ctx, "mirage:auction:*")
 		ch := sub.Channel()
 		for msg := range ch {
 			h.broadcast <- []byte(msg.Payload)
