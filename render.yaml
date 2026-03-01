@@ -1,5 +1,5 @@
 # 蜃景交易所 — 方案 2 極限壓縮：Render Blueprint
-# 部署前請將下方 repo 換成你的 GitHub 專案 URL（例如 https://github.com/your-username/redis-lab-app）
+# 使用「包含此檔的 repo」：在 Render 建立 Blueprint 時連接你的 GitHub redis-lab-app 即可，勿寫死 repo URL。
 # 僅 Gateway 對外；Redis 與 Engine 為內網服務。Identity 不部署，由 Gateway 內建 fallback。
 
 version: "1"
@@ -10,14 +10,12 @@ services:
     runtime: docker
     dockerfilePath: ./packages/redis/Dockerfile
     plan: free
-    repo: https://github.com/dennislee928/redis-lab-app
 
   # 2. 地獄火撮合引擎：Rust（內網，不對外）
   - type: pserv
     name: mirage-engine
     runtime: rust
     plan: free
-    repo: https://github.com/dennislee928/redis-lab-app
     buildCommand: cargo build --release --manifest-path apps/engine/Cargo.toml
     startCommand: ./target/release/mirage-engine
     envVars:
@@ -31,7 +29,6 @@ services:
     name: mirage-gateway
     runtime: go
     plan: free
-    repo: https://github.com/dennislee928/redis-lab-app
     buildCommand: cd apps/gateway && go build -o bin/gateway .
     startCommand: ./apps/gateway/bin/gateway
     envVars:
