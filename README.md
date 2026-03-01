@@ -41,4 +41,16 @@ docker-compose up -d
 - 身份洗牌：Gateway 每 10 秒對 WebSocket 連線推送新虛擬 ID。  
 - 死間開關：Sentinel 訂閱 Redis Keyspace 過期事件，觸發焦土邏輯並可 PUBLISH 通知。
 
+## 部署 (Deployment)
+
+支援兩套部署方案，可依需求擇一或並存：
+
+| 方案 | 情境 | 前端 | 後端 | 關鍵環境變數 |
+|------|------|------|------|--------------|
+| **暗影隧道** | Vercel + 本機，$0 | Vercel | Cloudflare Tunnel → 本機 Gateway/Engine/Identity/Redis | `NEXT_PUBLIC_GATEWAY_WS`、`NEXT_PUBLIC_GATEWAY_API`（Tunnel URL） |
+| **極限壓縮** | Vercel + Render，$0 | Vercel（rewrites 隱藏後端） | Render：僅 Gateway 對外，Redis/Engine 內網，Identity 由 Gateway fallback | 前端同源；Render 見根目錄 `render.yaml`。部署前請替換 `apps/frontend/vercel.json` 內 destination 為自己的 Render Gateway URL。 |
+
+- **暗影隧道** 設定步驟：[docs/deploy-shadow-tunnel.md](docs/deploy-shadow-tunnel.md)
+- **極限壓縮**：根目錄 `render.yaml` 部署至 Render；Vercel 前端使用同源 `/ws`、`/api`，由 vercel.json rewrites 轉發至 Render Gateway。Render Free Tier 有 750 小時/月與睡眠限制，僅適合展示用。
+
 ```
