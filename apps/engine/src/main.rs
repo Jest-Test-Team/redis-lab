@@ -110,7 +110,7 @@ async fn bid(Json(req): Json<BidReq>) -> Json<BidRes> {
     let now = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .unwrap()
-        .as_millis();
+        .as_millis() as i64;
     let result: String = redis::Script::new(LUA_BID)
         .key(&zkey)
         .key(&metakey)
@@ -139,7 +139,7 @@ async fn settle(Json(req): Json<SettleReq>) -> Json<SettleRes> {
     let now = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .unwrap()
-        .as_millis();
+        .as_millis() as i64;
     let result: Vec<String> = redis::Script::new(LUA_SETTLE)
         .key(&zkey)
         .key(&metakey)
@@ -185,17 +185,29 @@ async fn leaderboard(Path(id): Path<String>) -> Json<LeaderboardRes> {
     })
 }
 
-#[tokio::main]
-async fn main() {
-    let app = Router::new()
+fn app() -> Router {
+    Router::new()
         .route("/auction/create", post(create_auction))
         .route("/auction/bid", post(bid))
         .route("/auction/settle", post(settle))
         .route("/auction/leaderboard/:id", get(leaderboard))
-        .layer(CorsLayer::permissive());
+        .layer(CorsLayer::permissive())
+}
 
+#[tokio::main]
+async fn main() {
     let port = env::var("PORT").unwrap_or_else(|_| "8081".to_string());
     let addr = format!("0.0.0.0:{}", port);
     let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
+    axum::serve(listener, app()).await.unwrap();
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_app_router_builds() {
+        let _ = app();
+    }
 }

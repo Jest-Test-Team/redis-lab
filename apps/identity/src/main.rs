@@ -47,14 +47,26 @@ async fn get_token() -> Json<TokenRes> {
     })
 }
 
+fn app() -> Router {
+    Router::new()
+        .route("/identity/token", get(get_token))
+        .layer(CorsLayer::permissive())
+}
+
 #[tokio::main]
 async fn main() {
-    let app = Router::new()
-        .route("/identity/token", get(get_token))
-        .layer(CorsLayer::permissive());
-
     let port = env::var("PORT").unwrap_or_else(|_| "8082".to_string());
     let addr = format!("0.0.0.0:{}", port);
     let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
+    axum::serve(listener, app()).await.unwrap();
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_app_router_builds() {
+        let _ = app();
+    }
 }

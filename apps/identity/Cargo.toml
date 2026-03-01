@@ -7,7 +7,7 @@ description = "身份洗牌矩陣 — 虛擬 ID / Token"
 [dependencies]
 axum = { version = "0.7", features = ["json"] }
 tokio = { version = "1", features = ["full"] }
-redis = { version = "0.24", features = ["connection-manager"] }
+redis = { version = "0.24", features = ["connection-manager", "tokio-comp"] }
 serde = { version = "1", features = ["derive"] }
 tower-http = { version = "0.5", features = ["cors"] }
 uuid = { version = "1", features = ["v4"] }

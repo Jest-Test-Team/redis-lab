@@ -5,7 +5,8 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 echo "=== 1. Go tests (gateway, sentinel) ==="
-go test ./apps/gateway/... ./apps/sentinel/... -count=1
+(cd apps/gateway && go test . -count=1)
+(cd apps/sentinel && go test . -count=1)
 
 echo "=== 2. Cargo test (engine) ==="
 cargo test --manifest-path apps/engine/Cargo.toml
