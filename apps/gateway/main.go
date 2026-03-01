@@ -164,7 +164,11 @@ func main() {
 	r.POST("/api/auction/bid", proxyBid(engineURL))
 	r.POST("/api/auction/settle", proxySettle(engineURL))
 	r.GET("/api/auction/leaderboard/:id", proxyLeaderboard(engineURL))
-	r.GET("/api/identity/token", proxyGetToken(identityURL))
+	if identityURL == "" {
+		r.GET("/api/identity/token", localIdentityToken())
+	} else {
+		r.GET("/api/identity/token", proxyGetToken(identityURL))
+	}
 
 	if err := r.Run(":8080"); err != nil {
 		log.Fatal(err)
@@ -176,6 +180,20 @@ func getEnv(k, d string) string {
 		return v
 	}
 	return d
+}
+
+// localIdentityToken 在未設定 IDENTITY_URL 時由 Gateway 直接產生虛擬 ID（方案 2 極限壓縮用）
+func localIdentityToken() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		b := make([]byte, 6)
+		if _, err := rand.Read(b); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "rand failed"})
+			return
+		}
+		virtualID := "vid_" + base64.URLEncoding.EncodeToString(b)[:8]
+		expiresAtMs := time.Now().Add(identityRotateSec * time.Second).UnixMilli()
+		c.JSON(http.StatusOK, gin.H{"virtualId": virtualID, "expiresAtMs": expiresAtMs})
+	}
 }
 
 func proxyCreateAuction(base string) gin.HandlerFunc {
