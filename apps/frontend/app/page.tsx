@@ -2,14 +2,11 @@
 
 import { motion } from "framer-motion";
 import { useWs } from "@/hooks/useWs";
-
-const GATEWAY_WS =
-  typeof window !== "undefined"
-    ? `ws://${window.location.hostname}:8080/ws`
-    : "";
+import { getGatewayWsUrl } from "@/lib/gateway-url";
 
 export default function Home() {
-  const { connected, virtualId, lastEvent, logs } = useWs(GATEWAY_WS);
+  const wsUrl = getGatewayWsUrl();
+  const { connected, virtualId, lastEvent, logs } = useWs(wsUrl);
 
   return (
     <main className="min-h-screen p-6 md:p-10">
