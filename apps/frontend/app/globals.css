@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-jetbrains: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  background: #0d0d0f;
+  color: #e0e0e0;
+  font-family: var(--font-jetbrains);
+}
+
+/* 賽博龐克終端掃描線 */
+.terminal-scan::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+  pointer-events: none;
+}
+
+.glow-green {
+  text-shadow: 0 0 8px #00ff88, 0 0 16px #00ff8866;
+}
+.glow-cyan {
+  text-shadow: 0 0 8px #00d4ff, 0 0 16px #00d4ff66;
+}

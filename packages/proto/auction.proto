@@ -1,0 +1,66 @@
+syntax = "proto3";
+package mirage.auction;
+
+option go_package = "github.com/redis-lab-app/packages/proto/auction;auction";
+
+// 建立拍賣（5 秒視窗）
+message CreateAuctionRequest {
+  string auction_id = 1;
+  int64 duration_ms = 2;  // 通常 5000
+}
+message CreateAuctionResponse {
+  bool ok = 1;
+  string error = 2;
+  int64 end_at_ms = 3;
+}
+
+// 出價
+message BidRequest {
+  string auction_id = 1;
+  string bidder_id = 2;
+  double amount = 3;
+}
+message BidResponse {
+  enum Status {
+    UNKNOWN = 0;
+    OK = 1;       // 當前最高價
+    OUTBID = 2;   // 有人更高
+    ENDED = 3;    // 已結標
+    INVALID = 4;
+  }
+  Status status = 1;
+  string error = 2;
+}
+
+// 結標查詢
+message SettleRequest {
+  string auction_id = 1;
+}
+message SettleResponse {
+  bool ok = 1;
+  string winner_id = 2;
+  double top_bid = 3;
+  string error = 4;
+}
+
+// 排行榜
+message LeaderboardRequest {
+  string auction_id = 1;
+  int32 top_n = 2;
+}
+message LeaderboardEntry {
+  string bidder_id = 1;
+  double amount = 2;
+  int32 rank = 3;
+}
+message LeaderboardResponse {
+  repeated LeaderboardEntry entries = 1;
+  string error = 2;
+}
+
+service AuctionService {
+  rpc CreateAuction(CreateAuctionRequest) returns (CreateAuctionResponse);
+  rpc Bid(BidRequest) returns (BidResponse);
+  rpc Settle(SettleRequest) returns (SettleResponse);
+  rpc Leaderboard(LeaderboardRequest) returns (LeaderboardResponse);
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+package mirage.identity;
+
+option go_package = "github.com/redis-lab-app/packages/proto/identity;identity";
+
+// 取得或刷新虛擬 ID（Token）
+message GetTokenRequest {
+  string connection_id = 1;  // 可選，用於綁定連線
+}
+message GetTokenResponse {
+  string virtual_id = 1;
+  int64 expires_at_ms = 2;
+  string error = 3;
+}
+
+// 刷新：每 10 秒由 Gateway 呼叫
+message RefreshTokenRequest {
+  string connection_id = 1;
+  string previous_virtual_id = 2;
+}
+message RefreshTokenResponse {
+  string virtual_id = 1;
+  int64 expires_at_ms = 2;
+  string error = 3;
+}
+
+service IdentityService {
+  rpc GetToken(GetTokenRequest) returns (GetTokenResponse);
+  rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse);
+}

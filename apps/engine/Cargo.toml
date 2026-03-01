@@ -1,0 +1,12 @@
+[package]
+name = "mirage-engine"
+version = "0.1.0"
+edition = "2021"
+description = "地獄火撮合引擎 — 極短線拍賣 Lua/ZSet"
+
+[dependencies]
+axum = { version = "0.7", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+redis = { version = "0.24", features = ["connection-manager"] }
+serde = { version = "1", features = ["derive"] }
+tower-http = { version = "0.5", features = ["cors"] }
