@@ -26,7 +26,7 @@ const (
 )
 
 var upgrader = websocket.Upgrader{
-	CheckOrigin: func(r *http.Request) bool { return true },
+	CheckOrigin: func(r *http.Request) bool { return true }, // 在 main() 依 CORS_ORIGINS 覆寫
 }
 
 type connState struct {
@@ -127,14 +127,21 @@ func main() {
 	r := gin.Default()
 	// CORS：允許前端網域（mirage-exchange.dennisleehappy.org）與本機開發
 	corsOrigins := getEnv("CORS_ORIGINS", "https://mirage-exchange.dennisleehappy.org,http://localhost:3000,http://127.0.0.1:3000")
+	allowedOrigins := make(map[string]struct{})
+	for _, o := range strings.Split(corsOrigins, ",") {
+		if s := strings.TrimSpace(o); s != "" {
+			allowedOrigins[s] = struct{}{}
+		}
+	}
+	upgrader.CheckOrigin = func(r *http.Request) bool {
+		origin := r.Header.Get("Origin")
+		_, ok := allowedOrigins[origin]
+		return ok || origin == ""
+	}
 	r.Use(func(c *gin.Context) {
 		origin := c.GetHeader("Origin")
-		for _, o := range strings.Split(corsOrigins, ",") {
-			allowed := strings.TrimSpace(o)
-			if allowed != "" && origin == allowed {
-				c.Header("Access-Control-Allow-Origin", origin)
-				break
-			}
+		if _, ok := allowedOrigins[origin]; ok {
+			c.Header("Access-Control-Allow-Origin", origin)
 		}
 		c.Header("Access-Control-Allow-Credentials", "true")
 		c.Header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")

@@ -33,7 +33,11 @@ services:
     plan: free
     buildCommand: cd apps/gateway && go build -o bin/gateway .
     startCommand: ./apps/gateway/bin/gateway
+    domains:
+      - api-mirage-exchange.dennisleehappy.org
     envVars:
+      - key: CORS_ORIGINS
+        value: https://mirage-exchange.dennisleehappy.org,http://localhost:3000,http://127.0.0.1:3000
       - key: REDIS_ADDR
         fromService:
           type: keyvalue

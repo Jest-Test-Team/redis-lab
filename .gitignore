@@ -7,3 +7,4 @@ apps/frontend/.next/
 **/target/
 
 .DS_Store
+apps/frontend/.env.example
