@@ -5,3 +5,5 @@ src/redis-lab/
 apps/frontend/node_modules/
 apps/frontend/.next/
 **/target/
+
+.DS_Store
