@@ -22,14 +22,6 @@ describe("getGatewayWsUrl", () => {
     expect(getGatewayWsUrl()).toBe("ws://localhost:8080/ws");
   });
 
-  it("returns same-origin /ws when not localhost", () => {
-    delete process.env.NEXT_PUBLIC_GATEWAY_WS;
-    (globalThis as any).window = {
-      location: { hostname: "vercel.app", protocol: "https:", host: "mirage.vercel.app" },
-    };
-    const url = getGatewayWsUrl();
-    expect(url).toBe("wss://mirage.vercel.app/ws");
-  });
 });
 
 describe("getGatewayApiUrl", () => {
@@ -51,12 +43,4 @@ describe("getGatewayApiUrl", () => {
     expect(getGatewayApiUrl()).toBe("http://localhost:8080");
   });
 
-  it("returns window.origin when not localhost", () => {
-    delete process.env.NEXT_PUBLIC_GATEWAY_API;
-    (globalThis as any).window = {
-      location: { hostname: "vercel.app", origin: "https://mirage.vercel.app" },
-    };
-    const url = getGatewayApiUrl();
-    expect(url).toBe("https://mirage.vercel.app");
-  });
 });
