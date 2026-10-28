@@ -43,6 +43,7 @@
   },
   "overrides": {
     "form-data": "^4.0.6",
-    "minimist": "^1.2.6"
+    "minimist": "^1.2.6",
+    "@babel/traverse": "^7.23.2"
   }
 }
