@@ -101,6 +101,7 @@
     "fsevents": "^1.2.11",
     "https-proxy-agent": "^2.2.3",
     "netmask": "^2.0.1",
-    "proxy-addr": "^2.0.8"
+    "proxy-addr": "^2.0.8",
+    "set-value": "^2.0.1"
   }
 }
