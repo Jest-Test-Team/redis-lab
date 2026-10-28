@@ -103,6 +103,7 @@
     "netmask": "^2.0.1",
     "proxy-addr": "^2.0.8",
     "set-value": "^2.0.1",
-    "websocket-driver": "^0.7.5"
+    "websocket-driver": "^0.7.5",
+    "cipher-base": "^1.0.5"
   }
 }
