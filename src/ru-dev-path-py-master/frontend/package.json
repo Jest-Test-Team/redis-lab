@@ -96,6 +96,7 @@
     "loader-utils": "^1.4.2",
     "lodash.defaultsdeep": "^4.6.1",
     "pbkdf2": "^3.1.7",
-    "@babel/traverse": "^7.23.2"
+    "@babel/traverse": "^7.23.2",
+    "ejs": "^3.1.10"
   }
 }
