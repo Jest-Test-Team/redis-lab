@@ -28,5 +28,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/jest-dom": "^6.1.5"
+  },
+  "overrides": {
+    "handlebars": "^4.7.10"
   }
 }
