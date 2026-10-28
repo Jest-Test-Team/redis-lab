@@ -90,6 +90,7 @@
   ],
   "overrides": {
     "handlebars": "^4.7.10",
-    "elliptic": "^6.6.1"
+    "elliptic": "^6.6.1",
+    "url-parse": "^1.5.9"
   }
 }
