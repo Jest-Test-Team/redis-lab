@@ -121,6 +121,7 @@
     "browserslist": "^4.28.7",
     "path-to-regexp": "^0.1.13",
     "follow-redirects": "^1.16.0",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "serialize-javascript": "^7.1.3"
   }
 }
