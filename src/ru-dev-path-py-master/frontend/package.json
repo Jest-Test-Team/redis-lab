@@ -139,6 +139,7 @@
     "ansi-html": "^0.0.8",
     "ansi-regex": "^3.0.1",
     "browserify-sign": "^4.2.2",
-    "compression": "^1.8.2"
+    "compression": "^1.8.2",
+    "degenerator": "^3.0.1"
   }
 }
