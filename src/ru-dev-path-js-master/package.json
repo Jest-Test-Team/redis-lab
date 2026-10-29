@@ -25,11 +25,11 @@
     "bluebird": "^3.5.5",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.20.0",
     "express-validator": "^6.0.0",
     "moment": "^2.29.4",
-    "morgan": "^1.9.1",
-    "redis": "^2.8.0",
+    "morgan": "^1.12.1",
+    "redis": "^3.1.1",
     "round-to": "^4.0.0",
     "shortid": "^2.2.14",
     "winston": "^3.2.1"
@@ -63,6 +63,7 @@
     "flatted": "^3.4.2",
     "json5": "^2.2.2",
     "semver": "^7.5.2",
-    "http-cache-semantics": "^4.1.1"
+    "http-cache-semantics": "^4.1.1",
+    "ajv": "^8.18.0"
   }
 }
