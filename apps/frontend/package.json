@@ -38,6 +38,8 @@
     "ws": "^8.21.0",
     "browserslist": "^4.28.7",
     "picomatch": "^4.0.4",
-    "postcss-selector-parser": "^6.1.5"
+    "postcss-selector-parser": "^6.1.5",
+    "@babel/core": "^7.29.6",
+    "@tootallnate/once": "^2.0.1"
   }
 }
