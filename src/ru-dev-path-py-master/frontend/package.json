@@ -146,6 +146,7 @@
     "kind-of": "^6.0.3",
     "merge": "^2.1.1",
     "mime": "^1.4.1",
-    "nth-check": "^2.0.1"
+    "nth-check": "^2.0.1",
+    "pac-resolver": "^5.0.0"
   }
 }
