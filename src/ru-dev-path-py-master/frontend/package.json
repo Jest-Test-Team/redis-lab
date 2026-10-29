@@ -137,6 +137,7 @@
     "webpack-dev-middleware": "^7.4.6",
     "acorn": "^6.4.1",
     "ansi-html": "^0.0.8",
-    "ansi-regex": "^3.0.1"
+    "ansi-regex": "^3.0.1",
+    "browserify-sign": "^4.2.2"
   }
 }
