@@ -113,6 +113,7 @@
     "js-yaml": "^4.3.2",
     "node-forge": "^1.4.0",
     "lodash": "^4.18.0",
-    "postcss": "^8.5.23"
+    "postcss": "^8.5.23",
+    "minimatch": "^3.1.4"
   }
 }
