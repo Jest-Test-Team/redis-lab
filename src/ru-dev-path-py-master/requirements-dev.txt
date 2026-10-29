@@ -58,7 +58,7 @@ pytest==5.4.1
     # via
     #   -r requirements-dev.in
     #   pytest-dotenv
-python-dotenv==0.15.0
+python-dotenv==1.2.2
     # via pytest-dotenv
 readme-renderer==28.0
     # via twine
