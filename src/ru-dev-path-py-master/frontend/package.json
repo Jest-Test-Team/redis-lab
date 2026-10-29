@@ -135,6 +135,7 @@
     "json5": "^2.2.2",
     "tmp": "^0.2.6",
     "webpack-dev-middleware": "^7.4.6",
-    "acorn": "^6.4.1"
+    "acorn": "^6.4.1",
+    "ansi-html": "^0.0.8"
   }
 }
