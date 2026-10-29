@@ -63,6 +63,7 @@
     "flatted": "^3.4.2",
     "json5": "^2.2.2",
     "semver": "^7.5.2",
-    "http-cache-semantics": "^4.1.1"
+    "http-cache-semantics": "^4.1.1",
+    "ajv": "^8.18.0"
   }
 }
