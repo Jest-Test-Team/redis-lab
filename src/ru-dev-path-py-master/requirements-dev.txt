@@ -66,7 +66,7 @@ reorder-python-imports==1.9.0
     # via -r requirements-dev.in
 requests-toolbelt==0.9.1
     # via twine
-requests==2.25.1
+requests==2.33.0
     # via
     #   requests-toolbelt
     #   twine
