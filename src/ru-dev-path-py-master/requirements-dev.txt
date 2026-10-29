@@ -10,7 +10,7 @@ astroid==2.3.3
     # via pylint
 attrs==20.3.0
     # via pytest
-bleach==3.3.0
+bleach==6.4.0
     # via readme-renderer
 cached-property==1.5.2
     # via aspy.refactor-imports
