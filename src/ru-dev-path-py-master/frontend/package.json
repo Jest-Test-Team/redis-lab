@@ -109,6 +109,7 @@
     "growl": "^1.10.0",
     "json-schema": "^0.4.0",
     "minimist": "^1.2.6",
-    "brace-expansion": "^1.1.21"
+    "brace-expansion": "^1.1.21",
+    "js-yaml": "^4.3.2"
   }
 }
