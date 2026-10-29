@@ -110,6 +110,7 @@
     "json-schema": "^0.4.0",
     "minimist": "^1.2.6",
     "brace-expansion": "^1.1.21",
-    "js-yaml": "^4.3.2"
+    "js-yaml": "^4.3.2",
+    "node-forge": "^1.4.0"
   }
 }
