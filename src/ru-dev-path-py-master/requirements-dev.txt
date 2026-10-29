@@ -75,7 +75,7 @@ six==1.15.0
     #   astroid
     #   bleach
     #   readme-renderer
-tqdm==4.56.0
+tqdm==4.66.3
     # via twine
 twine==3.1.1
     # via -r requirements-dev.in
