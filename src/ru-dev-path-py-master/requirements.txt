@@ -39,7 +39,7 @@ marshmallow-enum==1.5.1
     # via marshmallow-dataclass
 marshmallow-union==0.1.15.post1
     # via marshmallow-dataclass
-marshmallow==3.10.0
+marshmallow==3.26.2
     # via
     #   marshmallow-dataclass
     #   marshmallow-enum
