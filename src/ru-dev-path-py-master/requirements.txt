@@ -12,7 +12,7 @@ click==7.1.1
     # via
     #   -r requirements.in
     #   flask
-cryptography==49.0.0
+cryptography==50.0.0
     # via -r requirements.in
 flask-cors==6.0.0
     # via -r requirements.in
