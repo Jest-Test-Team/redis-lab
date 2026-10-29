@@ -140,6 +140,7 @@
     "ansi-regex": "^3.0.1",
     "browserify-sign": "^4.2.2",
     "compression": "^1.8.2",
-    "degenerator": "^3.0.1"
+    "degenerator": "^3.0.1",
+    "dns-packet": "^1.3.2"
   }
 }
