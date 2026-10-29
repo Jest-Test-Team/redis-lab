@@ -127,6 +127,7 @@
     "braces": "^3.0.3",
     "debug": "^4.3.1",
     "decode-uri-component": "^0.5.0",
-    "diff": "^3.5.1"
+    "diff": "^3.5.1",
+    "http-proxy-agent": "^2.1.0"
   }
 }
