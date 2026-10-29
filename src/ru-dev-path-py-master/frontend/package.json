@@ -158,6 +158,7 @@
     "micromatch": "^4.0.8",
     "tough-cookie": "^4.1.3",
     "color-string": "^1.5.5",
-    "fast-xml-parser": "^5.7.0"
+    "fast-xml-parser": "^5.7.0",
+    "hosted-git-info": "^2.8.9"
   }
 }
