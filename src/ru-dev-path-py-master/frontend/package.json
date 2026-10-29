@@ -161,6 +161,7 @@
     "fast-xml-parser": "^5.7.0",
     "hosted-git-info": "^2.8.9",
     "mem": "^4.0.0",
-    "path-parse": "^1.0.7"
+    "path-parse": "^1.0.7",
+    "sockjs": "^0.3.20"
   }
 }
