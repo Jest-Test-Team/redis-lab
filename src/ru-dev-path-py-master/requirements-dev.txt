@@ -14,7 +14,7 @@ bleach==3.3.0
     # via readme-renderer
 cached-property==1.5.2
     # via aspy.refactor-imports
-certifi==2020.12.5
+certifi==2026.10.19
     # via requests
 chardet==4.0.0
     # via requests
