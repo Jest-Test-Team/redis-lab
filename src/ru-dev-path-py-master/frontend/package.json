@@ -129,6 +129,7 @@
     "decode-uri-component": "^0.5.0",
     "diff": "^3.5.1",
     "http-proxy-agent": "^2.1.0",
-    "http-proxy-middleware": "^2.0.10"
+    "http-proxy-middleware": "^2.0.10",
+    "ip": "^1.1.9"
   }
 }
